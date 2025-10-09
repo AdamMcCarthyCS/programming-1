@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Challenge1 {
+public class OddOrEven {
     public static void main(String[] args) {
 
         // initialise scanner instance
