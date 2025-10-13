@@ -18,4 +18,9 @@ public class MethodExamples {
         System.out.println("Hello " + name + ", you are "
         + age + " years old.");
     }
+
+    public int timesTwo(int a) {
+        int num = a * 2;
+        return num;
+    }
 }
