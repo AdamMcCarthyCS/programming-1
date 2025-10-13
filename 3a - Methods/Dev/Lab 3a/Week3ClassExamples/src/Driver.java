@@ -3,6 +3,6 @@ public class Driver {
     MethodExamples example = new MethodExamples();
     // Call a method with no parameters
     example.sayHello();
-    example.greet("Adam", 120);
+    example.greet();
     }
 }
