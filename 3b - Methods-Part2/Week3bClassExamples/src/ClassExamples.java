@@ -10,7 +10,8 @@ public class ClassExamples {
     private Scanner scanner = new Scanner(System.in);
 
     /**
-     * A method to compute the cube of an integer
+     * Computes the cube of an integer.
+     *
      * @param number an integer value
      *
      * @return the cube of the given integer
@@ -20,8 +21,7 @@ public class ClassExamples {
     }
 
     /**
-     * A method that reads in an integer from the user and
-     * outputs its cube
+     * A method that reads in an integer from the user and outputs its cube.
      *
      * @return the cube of the user entered integer
      */
@@ -30,12 +30,12 @@ public class ClassExamples {
         System.out.print("Enter an integer to be cubed: ");
         int valueToBeCubed = scanner.nextInt();
 
-        // use the parameterised version of the method to carry out the actual calculation
+        // use the parameterised version of the method to carry out the actual calculation.
         return cubeOfInteger(valueToBeCubed);
     }
 
     /**
-     * This method adds two double variables and prints the result
+     * This method adds two double variables and prints the result.
      *
      * @param num1  the first double in the sum
      * @param num2  the second double in the sum
@@ -46,7 +46,7 @@ public class ClassExamples {
     }
 
     /**
-     * This method adds two integer variables and prints the result
+     * This method adds two integer variables and prints the result.
      *
      * @param num1  the first integer in the sum
      * @param num2  the second integer in the sum
@@ -57,12 +57,26 @@ public class ClassExamples {
     }
 
     /**
-     * Converts a temperature in Fahrenheit to Celsius and prints to standard output
+     * Converts a temperature in Fahrenheit to Celsius and prints to standard output.
      *
      * @param   fahrenheit a temperature on the Fahrenheit scale
      * @return  A temperature in degrees Celsius
      */
     public double fahrenheitToCelsius(double fahrenheit) {
         return (fahrenheit - 32.0) * (5.0/9.0);
+    }
+
+    /**
+     * Reads a temperature in Fahrenheit from the user and converts it to Celsius.
+     * Prints the converted temperature to the standard output.
+     *
+     * @return  A temperature in degrees Celsius
+     */
+    public double fahrenheitToCelsius() {
+        // read a Fahrenheit temperature in from the user as a double
+        System.out.print("Enter a temperature in degrees Fahrenheit: ");
+        double fahrenheit = scanner.nextDouble();
+
+        return fahrenheitToCelsius(fahrenheit);
     }
 }

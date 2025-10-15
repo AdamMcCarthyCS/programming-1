@@ -62,5 +62,12 @@ public class Driver {
         double temperatureInCelsius = example.fahrenheitToCelsius(temperatureInFahrenheit);
         System.out.println(temperatureInFahrenheit + " degrees Fahrenheit converts to "
                 + temperatureInCelsius + " degrees Celsius");
+
+        // leave a newline between the outputs
+        System.out.println();
+
+        // read in temperature from user and print Celsius conversion to standard output
+        temperatureInCelsius = example.fahrenheitToCelsius();
+        System.out.println("This converts to " + temperatureInCelsius + " degrees Celsius");
     }
 }
