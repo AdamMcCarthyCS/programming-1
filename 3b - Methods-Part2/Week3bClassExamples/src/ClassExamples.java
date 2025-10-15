@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+/**
+ * A collection of methods from the Week 3b lab
+ *
+ * @author Adam McCarthy
+ * @version 1.0
+ */
 public class ClassExamples {
     private Scanner scanner = new Scanner(System.in);
 
@@ -26,5 +32,27 @@ public class ClassExamples {
 
         // use the parameterised version of the method to carry out the actual calculation
         return cubeOfInteger(valueToBeCubed);
+    }
+
+    /**
+     * This method adds two double variables and prints the result
+     *
+     * @param num1  the first double in the sum
+     * @param num2  the second double in the sum
+     */
+    public void addNum(double num1, double num2) {
+        double result = num1 + num2;
+        System.out.println("This is double addNum with result: " + result);
+    }
+
+    /**
+     * This method adds two integer variables and prints the result
+     *
+     * @param num1  the first integer in the sum
+     * @param num2  the second integer in the sum
+     */
+    public void addNum(int num1, int num2) {
+        int result = num1 + num2;
+        System.out.println("This is int addNum with result: " + result);
     }
 }
