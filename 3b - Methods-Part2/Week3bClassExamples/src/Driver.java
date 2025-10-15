@@ -53,5 +53,14 @@ public class Driver {
         System.out.println("For " + doubleNum1 + " and " + doubleNum2 + ": ");
         example.addNum(doubleNum1, doubleNum2);
 
+        // *** EXAMPLE 3 ***
+
+        // leave a newline between the outputs
+        System.out.println();
+
+        double temperatureInFahrenheit = 451d;
+        double temperatureInCelsius = example.fahrenheitToCelsius(temperatureInFahrenheit);
+        System.out.println(temperatureInFahrenheit + " degrees Fahrenheit converts to "
+                + temperatureInCelsius + " degrees Celsius");
     }
 }

@@ -55,4 +55,14 @@ public class ClassExamples {
         int result = num1 + num2;
         System.out.println("This is int addNum with result: " + result);
     }
+
+    /**
+     * Converts a temperature in Fahrenheit to Celsius and prints to standard output
+     *
+     * @param   fahrenheit a temperature on the Fahrenheit scale
+     * @return  A temperature in degrees Celsius
+     */
+    public double fahrenheitToCelsius(double fahrenheit) {
+        return (fahrenheit - 32.0) * (5.0/9.0);
+    }
 }
