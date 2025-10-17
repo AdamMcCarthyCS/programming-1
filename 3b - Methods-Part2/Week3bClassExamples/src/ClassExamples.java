@@ -79,4 +79,59 @@ public class ClassExamples {
 
         return fahrenheitToCelsius(fahrenheit);
     }
+
+    /**
+     * A recursive function to calculate the factorial of a positive integer n
+     * The function uses the formula n! = 1 * 2 * ... * n-1 * n
+     *
+     * @param n     a positive integer to find the factorial of
+     * @return      an integer which is the factorial of n
+     */
+    public int factorial(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    /**
+     * A function to use a loop to calculate n factorial
+     * n! = 1 * 2 * ... * n-1 * n
+     *
+     * @param n     a positive integer to find the factorial value of
+     * @return      The result of calculating n * n-1 * ... * 2 * 1
+     */
+    public int loopFactorial(int n) {
+        int nFactorial = 1;
+        for (int i = 1; i <= n; i++) {
+            nFactorial *= i;
+        }
+        return nFactorial;
+    }
+
+    /**
+     * A recursive function to calculate the nth value of the fibonacci sequence
+     * the nth term Tn is given by Tn = Tn-1 + Tn-2 where n >= 1
+     *
+     * @param n     a positive integer value
+     * @return      the nth term of the fibonacci sequence
+     */
+    public int fibonacci(int n) {
+        int fib1 = 1;
+        int fib2 = 1;
+
+        if (n == 1) {
+            return fib1;
+        }
+
+        if (n == 2) {
+            return fib2;
+        }
+
+
+        return fibonacci(n - 1) + fibonacci (n - 2);
+    }
+
 }
+

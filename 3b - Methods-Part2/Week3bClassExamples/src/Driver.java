@@ -63,11 +63,34 @@ public class Driver {
         System.out.println(temperatureInFahrenheit + " degrees Fahrenheit converts to "
                 + temperatureInCelsius + " degrees Celsius");
 
+        // *** EXAMPLE 4 ***
+
         // leave a newline between the outputs
         System.out.println();
 
         // read in temperature from user and print Celsius conversion to standard output
         temperatureInCelsius = example.fahrenheitToCelsius();
         System.out.println("This converts to " + temperatureInCelsius + " degrees Celsius");
+
+        // leave a newline between the outputs
+        System.out.println();
+        int n = 6;
+        int factorialResult = example.factorial(n);
+        System.out.println("The factorial of " + n + " is " + factorialResult);
+
+        // leave a newline between the outputs
+        System.out.println();
+
+        // calculate n! using the loop function using previously defined n
+        int loopFactorialResult = example.loopFactorial(n);
+        System.out.println("The loop factorial of " + n + " is " + loopFactorialResult);
+
+        // leave a newline between the outputs
+        System.out.println();
+
+        int nForFibonacci = 10;
+        int fibonacciResult = example.fibonacci(nForFibonacci);
+        System.out.println("The " + nForFibonacci + "th term in the fibonacci sequence is "
+            + fibonacciResult);
     }
 }
