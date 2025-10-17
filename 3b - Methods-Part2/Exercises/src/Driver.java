@@ -39,5 +39,21 @@ public class Driver {
         // compute the product by reading in the three integers from the user
         int productResultTwo = exercise.product();
         System.out.println("The result of the user entered product is " + productResultTwo);
+
+        // Add a newline between the exercise outputs
+        System.out.println();
+
+        int firstInteger = 1;
+        int secondInteger = 2;
+        int thirdInteger = 3;
+
+        // try the largest integer in all three positions to verify method works correctly
+        int maxInteger1 = exercise.max(firstInteger, secondInteger, thirdInteger);
+        int maxInteger2 = exercise.max(thirdInteger, firstInteger, secondInteger);
+        int maxInteger3 = exercise.max(secondInteger, thirdInteger, firstInteger);
+
+        System.out.println("In test 1, the max integer is " + maxInteger1);
+        System.out.println("In test 2, the max integer is " + maxInteger2);
+        System.out.println("In test 3, the max integer is " + maxInteger3);
     }
 }

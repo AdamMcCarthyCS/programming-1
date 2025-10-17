@@ -52,5 +52,31 @@ public class Exercises {
         return product(firstInteger, secondInteger, thirdInteger);
     }
 
+    /**
+     * Finds the maximum integer of three integers
+     *
+     * @param firstInteger      the first integer value
+     * @param secondInteger     the second integer value
+     * @param thirdInteger      the third integer value
+     *
+     * @return                  the largest of the three integer values
+     */
+    public int max(int firstInteger, int secondInteger, int thirdInteger) {
+        // assume that the first integer is the max
+        int max = firstInteger;
+
+        // if the second integer is larger store it as the max
+        if (secondInteger > max) {
+            max = secondInteger;
+        }
+
+        // if the third integer is larger than the max of the first two integers store it as the max
+        if (thirdInteger > max) {
+            max = thirdInteger;
+        }
+
+        return max;
+    }
+
 
 }
