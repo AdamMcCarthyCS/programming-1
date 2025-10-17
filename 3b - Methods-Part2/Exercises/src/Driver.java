@@ -13,7 +13,12 @@ public class Driver {
         Exercises exercise = new Exercises();
 
         // Exercise 1
-        exercise.addNum();
+        int firstNumber = 15;
+        int secondNumber = 25;
+        int thirdNumber = 100;
+        int answer = exercise.addNum(firstNumber, secondNumber, thirdNumber);
+        System.out.println(firstNumber + " + " + secondNumber + " + " + thirdNumber + " = "
+            + answer);
 
         // Add a newline between the exercise outputs
         System.out.println();
@@ -22,6 +27,9 @@ public class Driver {
 
         // compute the product using arguments
         exercise.product(10, 20, 30);
+
+        // add a newline
+        System.out.println();
 
         // compute the product by reading in the three integers from the user
         exercise.product();

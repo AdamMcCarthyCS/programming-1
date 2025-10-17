@@ -10,23 +10,17 @@ public class Exercises {
     private Scanner scanner = new Scanner(System.in);
 
     /**
-     *  A method which reads in three integers from the user with the Scanner class and then prints their
-     *  sum.
+     * Computes the sum of three integers
+     *
+     * @param firstNum      the first integer
+     * @param secondNum     the second integer
+     * @param thirdNum      the third integer
+     *
+     * @return              the sum of the three integers
      */
-    public void addNum() {
-        // prompt the user to enter the three integers for the sum
-        System.out.print("Enter the first integer: ");
-        int firstNumber = scanner.nextInt();
+    public int addNum(int firstNum, int secondNum, int thirdNum) {
+        return firstNum + secondNum + thirdNum;
 
-        System.out.print("Enter the second integer: ");
-        int secondNumber = scanner.nextInt();
-
-        System.out.print("Enter the third integer: ");
-        int thirdNumber = scanner.nextInt();
-
-        // print the sum of the three integers to standard output in the required format
-        System.out.println(firstNumber + " + " + secondNumber + " + " + thirdNumber + " = "
-            + (firstNumber + secondNumber + thirdNumber));
     }
 
     /**
@@ -57,4 +51,6 @@ public class Exercises {
         // Use the original version of the method to compute the product and print to standard output
         product(firstInteger, secondInteger, thirdInteger);
     }
+
+
 }
