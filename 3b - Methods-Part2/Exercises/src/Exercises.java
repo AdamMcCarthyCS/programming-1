@@ -30,14 +30,14 @@ public class Exercises {
      * @param b     the second integer
      * @param c     the third integer
      */
-    public void product(int a, int b, int c) {
-        System.out.println(a + " * " + b + " * " + c + " = " + (a * b * c));
+    public int product(int a, int b, int c) {
+        return a * b * c;
     }
 
     /**
      * Computes the product of three integers read in from the user with the a Scanner object.
      */
-    public void product() {
+    public int product() {
         // reads the three integers from the user which are used to compute the product
         System.out.print("Enter the first integer: ");
         int firstInteger = scanner.nextInt();
@@ -49,7 +49,7 @@ public class Exercises {
         int thirdInteger = scanner.nextInt();
 
         // Use the original version of the method to compute the product and print to standard output
-        product(firstInteger, secondInteger, thirdInteger);
+        return product(firstInteger, secondInteger, thirdInteger);
     }
 
 
