@@ -14,5 +14,16 @@ public class Driver {
 
         // Exercise 1
         exercise.addNum();
+
+        // Add a newline between the exercise outputs
+        System.out.println();
+
+        // Exercise 2
+
+        // compute the product using arguments
+        exercise.product(10, 20, 30);
+
+        // compute the product by reading in the three integers from the user
+        exercise.product();
     }
 }
