@@ -6,6 +6,7 @@ public class Driver {
 
         // create a ArrayClass instance
         ArrayClass ac = new ArrayClass();
-        ac.exercise1();
+//        ac.exercise1();
+        ac.exercise2();
     }
 }
