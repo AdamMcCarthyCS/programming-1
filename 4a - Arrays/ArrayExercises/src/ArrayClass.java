@@ -50,7 +50,7 @@ public class ArrayClass {
     }
 
     /**
-     * Reads in
+     * Reads in integers and adds one to them then prints to the standard output
      */
     public void exercise3() {
         // initialise array to store user input
@@ -69,5 +69,26 @@ public class ArrayClass {
             System.out.println("Value " + i + " is " + array[i]);
         }
     }
+
+    /**
+     * Reads in ten wage amounts to an array and then prints its contents to the standard output.
+     */
+    public void exercise4() {
+        double[] wageArray = new double[10];
+
+        // Reads in ten wage amounts from user
+        for (int i = 0; i < wageArray.length; i++) {
+            System.out.print("Enter wage (" + (i + 1) + "): ");
+            wageArray[i] = scanner.nextDouble();
+        }
+
+        // print out the values of each wage to the standard output
+        for (int i = 0; i < wageArray.length; i++) {
+            System.out.println("Wage at index " + i + " is: " + wageArray[i]);
+
+        }
+    }
+
+
 }
 
