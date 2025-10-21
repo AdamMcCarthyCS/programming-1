@@ -286,9 +286,29 @@ public class ArrayClass {
             nameArray[i] = scanner.nextLine();
         }
 
-        // print out all elements of the array
+        // print substring of all elements of the array
         for (int i = 0; i < nameArray.length; i++) {
             System.out.println(nameArray[i].substring(0,3));
+        }
+    }
+
+    /**
+     * Print upper case sub string array elements entered by user
+     */
+    public void exercise15() {
+        String[] nameArray = new String[5];
+
+        // read five names into an array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.print("Enter name (" + (i + 1) +"): ");
+            nameArray[i] = scanner.nextLine();
+        }
+
+        // print out upper case first three letters of all elements of the array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.println(nameArray[i]
+                    .substring(0,3)
+                    .toUpperCase());
         }
     }
 }
