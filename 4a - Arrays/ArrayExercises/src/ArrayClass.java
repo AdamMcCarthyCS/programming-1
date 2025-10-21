@@ -43,6 +43,27 @@ public class ArrayClass {
             array[i] = scanner.nextInt();
         }
 
+        // print the values entered in reverse to the standard output
+        for (int i = 5; i >= 0; i--) {
+            System.out.println("Value " + i + " is " + array[i]);
+        }
+    }
+
+    /**
+     * Reads in
+     */
+    public void exercise3() {
+        // initialise array to store user input
+        int[] array = new int[6];
+
+        // fill the array by reading input from user
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("Enter integer " + (i + 1) + "/6: ");
+            array[i] = scanner.nextInt();
+            // add 1 to the current array element
+            array[i]++;
+        }
+
         // print the values entered to the standard output
         for (int i = 5; i >= 0; i--) {
             System.out.println("Value " + i + " is " + array[i]);
