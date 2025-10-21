@@ -15,15 +15,25 @@ public class Driver {
         // create a ArrayClass instance
         ArrayClass ac = new ArrayClass();
 
+        // PART 2
 //        ac.exercise1();
+
+        // PART 3
 //        ac.exercise2();
 //        ac.exercise3();
+
+        // PART 4
 //        ac.exercise4();
 //        ac.exercise5();
 //        ac.exercise6();
 //        ac.exercise7();
 //        ac.exercise8();
 //        ac.exercise9();
-        ac.exercise10();
+
+        // PART 5
+//        ac.exercise10();
+
+        // CHALLENGE
+        ac.exercise11();
     }
 }

@@ -210,5 +210,25 @@ public class ArrayClass {
             System.out.println("Name at index " + i + " is: " + nameArray[i]);
         }
     }
+
+    /**
+     * Reads five strings into an array capitalised and prints them to standard output
+     */
+    public void exercise11() {
+        String[] nameArray = new String[5];
+
+        // read five names into an array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.print("Enter name (" + (i + 1) +"): ");
+            nameArray[i] = scanner
+                    .nextLine()
+                    .toUpperCase(); // convert strings to uppercase before saving to array
+        }
+
+        // print out all elements of the array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.println("Name at index " + i + " is: " + nameArray[i]);
+        }
+    }
 }
 
