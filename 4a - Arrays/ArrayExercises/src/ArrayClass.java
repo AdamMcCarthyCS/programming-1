@@ -272,5 +272,24 @@ public class ArrayClass {
             }
         }
     }
+
+    /**
+     * Reads five name strings into an array and prints only those with length of 7 letters or
+     * greater
+     */
+    public void exercise14() {
+        String[] nameArray = new String[5];
+
+        // read five names into an array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.print("Enter name (" + (i + 1) +"): ");
+            nameArray[i] = scanner.nextLine();
+        }
+
+        // print out all elements of the array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.println(nameArray[i].substring(0,3));
+        }
+    }
 }
 
