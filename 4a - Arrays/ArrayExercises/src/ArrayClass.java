@@ -132,5 +132,22 @@ public class ArrayClass {
             System.out.println("Wage at index " + i + " is: " + wageArray[i]);
         }
     }
+
+    /**
+     * Reads in ten wage amounts to an array and calculates the average wage.
+     */
+    public void exercise7() {
+        double[] wageArray = new double[10];
+        double sum = 0;
+        // reads in ten wage amounts from user
+        for (int i = 0; i < wageArray.length; i++) {
+            System.out.print("Enter wage (" + (i + 1) + "): ");
+            wageArray[i] = scanner.nextDouble();
+            sum += wageArray[i];
+        }
+
+        // calculate the average and print to standard output
+        System.out.println("Average wage = " + sum/wageArray.length);
+    }
 }
 
