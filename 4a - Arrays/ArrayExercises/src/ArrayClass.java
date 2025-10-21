@@ -311,5 +311,26 @@ public class ArrayClass {
                     .toUpperCase());
         }
     }
+
+    /**
+     * Print array elements entered by user which contain a specific substring
+     */
+    public void exercise16() {
+        String[] nameArray = new String[5];
+
+        // read five names into an array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.print("Enter name (" + (i + 1) +"): ");
+            nameArray[i] = scanner.nextLine();
+        }
+
+        // print out upper case first three letters of all elements of the array
+        for (int i = 0; i < nameArray.length; i++) {
+            // parse strings to lowercase and print strings containing "ann"
+            if (nameArray[i].toLowerCase().contains("ann")) {
+                System.out.println("Name at index " + i + " is: " + nameArray[i]);
+            }
+        }
+    }
 }
 
