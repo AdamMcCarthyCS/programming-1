@@ -89,6 +89,48 @@ public class ArrayClass {
         }
     }
 
+    /**
+     * Reads in ten wage amounts to an array and then prints wage amounts greater than 100.
+     */
+    public void exercise5() {
+        double[] wageArray = new double[10];
 
+        // Reads in ten wage amounts from user
+        for (int i = 0; i < wageArray.length; i++) {
+            System.out.print("Enter wage (" + (i + 1) + "): ");
+            wageArray[i] = scanner.nextDouble();
+        }
+
+        // print out the values of each wage to the standard output
+        for (int i = 0; i < wageArray.length; i++) {
+            if (wageArray[i] > 100) {
+                System.out.println("Wage at index " + i + " is: " + wageArray[i]);
+            }
+        }
+    }
+
+    /**
+     * Reads in ten wage amounts to an array and deducts 10% from amounts over 1000 before printing
+     * the contents of the array
+     */
+    public void exercise6() {
+        double[] wageArray = new double[10];
+
+        // reads in ten wage amounts from user
+        for (int i = 0; i < wageArray.length; i++) {
+            System.out.print("Enter wage (" + (i + 1) + "): ");
+            wageArray[i] = scanner.nextDouble();
+
+            // reduce the value of the wage by 10% if above 1000
+            if (wageArray[i] > 1000) {
+                wageArray[i] *= 0.9;
+            }
+        }
+
+        // print out the values of each wage to the standard output
+        for (int i = 0; i < wageArray.length; i++) {
+            System.out.println("Wage at index " + i + " is: " + wageArray[i]);
+        }
+    }
 }
 

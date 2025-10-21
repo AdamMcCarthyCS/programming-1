@@ -19,5 +19,7 @@ public class Driver {
 //        ac.exercise2();
 //        ac.exercise3();
 //        ac.exercise4();
+//        ac.exercise5();
+        ac.exercise6();
     }
 }
