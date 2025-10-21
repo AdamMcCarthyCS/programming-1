@@ -1,8 +1,19 @@
 import java.util.Scanner;
 
+/**
+ * Contains methods practicing concepts from lab 4a including the
+ * use or Arrays and the Scanner class.
+ *
+ * @author Adam McCarthy
+ * @version 1.0
+ */
 public class ArrayClass {
     public Scanner scanner = new Scanner(System.in);
 
+    /**
+     * <p>Reads six integers from the user and prints them in
+     * ascending order.</p>
+     */
     public void exercise1() {
         // initialise array to store user input
         int[] array = new int[6];
@@ -19,7 +30,9 @@ public class ArrayClass {
         }
     }
 
-
+    /**
+     * <p>Reads six integers from the user and prints them in descending order.</p>
+     */
     public void exercise2() {
         // initialise array to store user input
         int[] array = new int[6];

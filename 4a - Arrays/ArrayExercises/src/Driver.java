@@ -1,5 +1,13 @@
 import java.util.Scanner;
 
+/**
+ * Represents the entry point of the program.
+ *
+ * <p>Contains the main method</p>
+ *
+ * @author Adam McCarthy
+ * @version 1.0
+ */
 public class Driver {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
