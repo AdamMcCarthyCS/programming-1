@@ -192,5 +192,23 @@ public class ArrayClass {
         System.out.println("Largest Wage = " + largest + " and is stored in location "
             + largestIndex);
     }
+
+    /**
+     * Reads five names into an array and then prints out the contents of the whole array
+     */
+    public void exercise10() {
+        String[] nameArray = new String[5];
+
+        // read five names into an array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.print("Enter name (" + (i + 1) +"): ");
+            nameArray[i] = scanner.nextLine();
+        }
+
+        // print out all elements of the array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.println("Name at index " + i + " is: " + nameArray[i]);
+        }
+    }
 }
 
