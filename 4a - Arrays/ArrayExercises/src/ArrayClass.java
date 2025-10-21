@@ -170,6 +170,27 @@ public class ArrayClass {
         System.out.println("Largest Wage = " + largest);
     }
 
+    /**
+     * Reads in six wage amounts to an array and prints out the largest wage.
+     */
+    public void exercise9() {
+        double[] wageArray = new double[6];
+        double largest = wageArray[0];
+        int largestIndex = 0;
+        // reads in ten wage amounts from user
+        for (int i = 0; i < wageArray.length; i++) {
+            System.out.print("Enter wage (" + (i + 1) + "): ");
+            wageArray[i] = scanner.nextDouble();
+            // update largest value if array element value exceeds it
+            if (wageArray[i] >  largest) {
+                largest = wageArray[i];
+                largestIndex = i;
+            }
+        }
 
+        // print the largest value to standard output
+        System.out.println("Largest Wage = " + largest + " and is stored in location "
+            + largestIndex);
+    }
 }
 
