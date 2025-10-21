@@ -230,5 +230,26 @@ public class ArrayClass {
             System.out.println("Name at index " + i + " is: " + nameArray[i]);
         }
     }
+
+    /**
+     * Reads five strings into an array which have been converted to lowercase and then prints the
+     * contents of the array.
+     */
+    public void exercise12() {
+        String[] nameArray = new String[5];
+
+        // read five names into an array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.print("Enter name (" + (i + 1) +"): ");
+            nameArray[i] = scanner
+                    .nextLine()
+                    .toLowerCase(); // convert strings to lower case before saving to array
+        }
+
+        // print out all elements of the array
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.println("Name at index " + i + " is: " + nameArray[i]);
+        }
+    }
 }
 
