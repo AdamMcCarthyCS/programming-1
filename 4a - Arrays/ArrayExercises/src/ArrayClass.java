@@ -149,5 +149,27 @@ public class ArrayClass {
         // calculate the average and print to standard output
         System.out.println("Average wage = " + sum/wageArray.length);
     }
+
+    /**
+     * Reads in six wage amounts to an array and prints out the largest wage.
+     */
+    public void exercise8() {
+        double[] wageArray = new double[6];
+        double largest = wageArray[0];
+        // reads in ten wage amounts from user
+        for (int i = 0; i < wageArray.length; i++) {
+            System.out.print("Enter wage (" + (i + 1) + "): ");
+            wageArray[i] = scanner.nextDouble();
+            // update largest value if array element value exceeds it
+            if (wageArray[i] >  largest) {
+                largest = wageArray[i];
+            }
+        }
+
+        // print the largest value to standard output
+        System.out.println("Largest Wage = " + largest);
+    }
+
+
 }
 
