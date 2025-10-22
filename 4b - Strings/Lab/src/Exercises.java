@@ -30,4 +30,33 @@ public class Exercises {
         String anotherPalindrome = "Niagara. O roar again!";
         System.out.println(anotherPalindrome.substring(11, 15));
     }
+
+    /**
+     * Demonstrate the use of the compareTo method
+     */
+    public void exer3() {
+        // Part 1
+//        String str1 = "Dog";
+//        String str2 = "Cat";
+
+        // Part 2
+//        String str1 = "cat";
+//        String str2 = "Cat";
+
+        // Part 3
+//        String str1 = "Animal";
+//        String str2 = "Cat";
+
+        // Part 4
+        String str1 = "Cat";
+        String str2 = "Cat";
+
+        if(str1.compareTo(str2) < 0) {
+            System.out.println(str1 + " comes before " + str2 + " in the alphabet");
+        } else if (str1.compareTo(str2) > 0) {
+            System.out.println(str2 + " comes before " + str1 + " in the alphabet");
+        } else {
+            System.out.println("The strings are identical");
+        }
+    }
 }
