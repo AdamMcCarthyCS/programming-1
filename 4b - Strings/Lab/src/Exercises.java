@@ -59,4 +59,23 @@ public class Exercises {
             System.out.println("The strings are identical");
         }
     }
+
+    /**
+     * Demonstrate the use of the equals method
+     */
+    public void exer4() {
+        // Part 1
+//        String str1 = "a";
+//        String str2 = "b";
+
+        // Part 2
+        String str1 = "a";
+        String str2 = "a";
+
+        if (str1.equals(str2)) {
+            System.out.println(str1 + " is the same as " + str2);
+        } else {
+            System.out.println(str1 + " is NOT the same as " + str2);
+        }
+    }
 }

@@ -4,7 +4,7 @@ public class Main {
         Exercises menu = new Exercises();
 //        menu.exer1();
 //        menu.exer2();
-        menu.exer3();
-//        menu.exer4();
+//        menu.exer3();
+        menu.exer4();
     }
 }
