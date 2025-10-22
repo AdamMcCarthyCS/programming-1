@@ -17,4 +17,17 @@ public class Exercises {
             + " is "
             + errorMessage404.charAt(9));
     }
+
+    /**
+     * Demonstrate the use of the substring String method
+     */
+    public void exer2() {
+        // Version 1 (with variable)
+//        String anotherPalindrome = "Niagara. O roar again!";
+//        String roar = anotherPalindrome.substring(11, 15);
+//        System.out.println(roar);
+
+        String anotherPalindrome = "Niagara. O roar again!";
+        System.out.println(anotherPalindrome.substring(11, 15));
+    }
 }
