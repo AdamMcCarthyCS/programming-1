@@ -20,5 +20,8 @@ public class Driver {
         System.out.println(ticketMaynooth.getBalance());
         // from exercise 2 - print machine balance
         System.out.println(ticketMaynooth.getTotal());
+
+        // print machine status
+        System.out.println(ticketMaynooth.getStatus());
     }
 }
