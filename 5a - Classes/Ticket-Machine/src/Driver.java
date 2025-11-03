@@ -15,6 +15,9 @@ public class Driver {
         ticketDublin4.insertMoney(50);
         ticketDublin4.printTicket();
 //
-//        System.out.println(ticketDublin4.getBalance());
+        System.out.println(ticketDublin4.getBalance());
+
+        // exercise 2 - print machine balance
+        System.out.println(ticketDublin4.getTotal());
     }
 }

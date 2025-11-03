@@ -75,4 +75,13 @@ public class TicketMachine
         // Clear the balance.
         balance = 0;
     }
+
+    /**
+     * Returns the total amount of money the machine has received from customers.
+     *
+     * @return      the total number of cents the machine has taken in
+     */
+    public int getTotal() {
+        return total;
+    }
 }
