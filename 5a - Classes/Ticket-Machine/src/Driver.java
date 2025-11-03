@@ -10,23 +10,13 @@ public class Driver {
         System.out.println(ticketDublin29.getPrice());
 
         // insert to little
-        ticketDublin4.insertMoney(20);
-        ticketDublin4.insertMoney(50);
-        System.out.println(ticketDublin4.getBalance());
-        ticketDublin4.insertMoney(50);
-        ticketDublin4.printTicket(); // ticket prints despite insufficent funds
-
-        // print an empty line so there is a space between outputs
-        System.out.println();
-
-        // insert too much
-        ticketDublin4.insertMoney(2000);
-        ticketDublin4.insertMoney(50);
-        System.out.println(ticketDublin4.getBalance());
-        ticketDublin4.insertMoney(50);
-        ticketDublin4.printTicket(); // ticket prints and returns no refund
+        ticketDublin1.insertMoney(100);
+        ticketDublin1.insertMoney(80);
+        System.out.println(ticketDublin1.getBalance());
+        ticketDublin1.insertMoney(145);
+        ticketDublin1.printTicket(); // ticket prints despite insufficent funds
 
         // exercise 2 - print machine balance
-        System.out.println(ticketDublin4.getTotal());
+        System.out.println(ticketDublin1.getTotal());
     }
 }
