@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         BankAccount bankAccount1 = new BankAccount("Elon Musk","123456789", 1500.0 );
-        BankAccount bankAccount2 = new BankAccount("Adam McCarthy","404040404", 1000000);
+        BankAccount bankAccount2 = new BankAccount("Adam McCarthy","404040404", -40);
 
 //        // deposit
 //        bankAccount1.balance = bankAccount1.balance+300;
