@@ -7,7 +7,17 @@ public class Driver {
         cups[0] = new CoffeeCup("Latte", 350);
         cups[1] = new CoffeeCup("Espresso", 100);
         cups[2] = new CoffeeCup("Cappuccino", 250);
-        cups[4] = new CoffeeCup("Americano", 300);
-        cups[5] = new CoffeeCup("Mocha", 400);
+        cups[3] = new CoffeeCup("Americano", 300);
+        cups[4] = new CoffeeCup("Mocha", 400);
+        
+        // Fill each cup in the array.
+        for (int i = 0; i < cups.length; i++) {
+            cups[i].fill();
+        }
+        
+        // Print the details of each cup in the array.
+        for (int i = 0; i < cups.length; i++) {
+            System.out.println(cups[i].displayDetails());
+        }
     }
 }
