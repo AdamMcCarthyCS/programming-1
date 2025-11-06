@@ -19,5 +19,18 @@ public class Driver {
         for (int i = 0; i < cups.length; i++) {
             System.out.println(cups[i].displayDetails());
         }
+        
+        // Drink 100ml from each
+        for (int i = 0; i < cups.length; i++) {
+            cups[i].drink(100);
+        }
+        
+        // Print a newline for better display
+        System.out.println();
+        
+        // Print how much is left of each type.
+        for (int i = 0; i < cups.length; i++) {
+            System.out.println(cups[i].getType() + ": " + cups[i].checkLevel() + "ml left");
+        }
     }
 }
