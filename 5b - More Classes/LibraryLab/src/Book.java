@@ -4,5 +4,10 @@ public class Book {
     private String author;
     private int pages;
     
-    // Constructor and methods to be added
+    // Constructor
+    public Book() {
+        title = "Unknown";
+        author = "Unknown";
+        pages = 0; // this would have been implicitly set
+    }
 }
