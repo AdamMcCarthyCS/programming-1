@@ -30,7 +30,8 @@ public class Book {
      * @return      a string containing the book title, author, and number of pages
      */
     public String printDetails() {
-        return "Title: " + title + ", Author: " + ", Pages: " + pages + ", Sales: " + bookSales;
+        return "Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Sales: "
+            + bookSales;
     }
     
     /**
