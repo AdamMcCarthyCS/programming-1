@@ -30,7 +30,7 @@ public class Book {
      * @return      a string containing the book title, author, and number of pages
      */
     public String printDetails() {
-        return "Title: " + title + ", Author: " + ", Pages: " + pages;
+        return "Title: " + title + ", Author: " + ", Pages: " + pages + ", Sales: " + bookSales;
     }
     
     /**
@@ -39,11 +39,13 @@ public class Book {
      * @param title     the book's title
      * @param author    the book's author
      * @param pages     the book's page count
+     * @param bookSales the book's sales count
      */
-    public void updateBookDetails(String title, String author, int pages) {
+    public void updateBookDetails(String title, String author, int pages, int bookSales) {
         this.title = title;
         this.author = author;
         this.pages = pages;
+        this.bookSales = bookSales;
     }
     
     /**
