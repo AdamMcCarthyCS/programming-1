@@ -9,17 +9,19 @@ public class Book {
     private String title;
     private String author;
     private int pages;
+    private int bookSales;
     
     /**
      * creates and instance of the book class and sets its field values
      *
-     * <p>The constructor sets the title, author, and number of pages of a book instance to
-     * default values</p>
+     * <p>The constructor sets the title, author, number of pages, and sales of a book
+     * instance to default values</p>
      */
     public Book() {
         title = "Unknown";
         author = "Unknown";
         pages = 0; // this would have been implicitly set
+        bookSales = 0;
     }
     
     /**
@@ -42,5 +44,12 @@ public class Book {
         this.title = title;
         this.author = author;
         this.pages = pages;
+    }
+    
+    /**
+     * Records a sale of a book
+     */
+    public void recordSale() {
+        bookSales += 1;
     }
 }
