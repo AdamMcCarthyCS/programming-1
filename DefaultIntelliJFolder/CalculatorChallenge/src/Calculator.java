@@ -19,6 +19,20 @@ public class Calculator {
     }
     
     /**
+     * Adds three values
+     *
+     * @param firstValue        the first value in the sum
+     * @param secondValue       the second value in the sum
+     * @param thirdValue        the third value in the sum
+     *
+     * @return                  the sum of the three values
+     */
+    public double add(double firstValue, double secondValue, double thirdValue) {
+        // call original method in adding the three values
+        return add(firstValue, secondValue) + thirdValue;
+    }
+    
+    /**
      * Subtracts two values
      *
      * @param firstValue        the first value in the difference
@@ -48,8 +62,8 @@ public class Calculator {
      * <p>Returns the quotient of two numbers unless the user tries to divide by 0. In this case
      * the method returns Double.NaN</p>
      *
-     * @param firstValue        the dividend of the quotient
-     * @param secondValue       the divisor of the quotient
+     * @param dividend        the dividend of the quotient
+     * @param divisor       the divisor of the quotient
      *
      * @return                  the quotient the two values
      */
