@@ -1,7 +1,14 @@
 public class BankAccount {
-    String name;
-    String accountNumber;
-    double balance;
+    //-----------//
+    //  fields   //
+    //-----------//
+    private String name;
+    private String accountNumber;
+    private double balance;
+    
+    //---------------//
+    //  constructors //
+    //---------------//
     
     public BankAccount() {
     }
@@ -10,6 +17,10 @@ public class BankAccount {
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
+    
+    //---------------//
+    //     methods   //
+    //---------------//
     
     public void deposit(double lodgement) {
         balance += lodgement;
@@ -28,5 +39,38 @@ public class BankAccount {
     public String display(){
         return "Name: " + name + ", Account Number: " + accountNumber + ", Balance: €" + balance;
     }
+    
+    //---------------//
+    //    getters    //
+    //---------------//
+    
+    public String getName() {
+        return name;
+    }
+    
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+    
+    public double getBalance() {
+        return balance;
+    }
+    
+    //---------------//
+    //    setters    //
+    //---------------//
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+    
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+    
 }
 
