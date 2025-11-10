@@ -11,6 +11,10 @@ public class BankAccount {
         balance = bal;
     }
     
+    public void deposit(double lodgement) {
+        balance += lodgement;
+    }
+    
     public String display(){
         return "Name: " + name + ", Account Number: " + accountNumber + ", Balance: €" + balance;
     }

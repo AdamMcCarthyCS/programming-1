@@ -3,7 +3,8 @@ public class Main {
         
         BankAccount bankAccount1 = new BankAccount("Elon Musk","123456789", 1500.0 );
         // deposit
-        bankAccount1.balance = bankAccount1.balance+300;
+        bankAccount1.deposit(300);
+        
         // Withdraw
         double withdrawAmount = 200.0;
         if (bankAccount1.balance >= withdrawAmount) {
