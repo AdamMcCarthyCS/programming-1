@@ -6,13 +6,10 @@ public class Main {
         bankAccount1.deposit(300);
         
         // Withdraw
-        double withdrawAmount = 200.0;
-        if (bankAccount1.balance >= withdrawAmount) {
-            bankAccount1.balance -= withdrawAmount;
-            System.out.println("Withdrawal sucessful");
-        } else {
-            System.out.println("Unable to withdraw €" + withdrawAmount + " for " + bankAccount1.name + " due to insufficient funds.");
-        }
+        String withdrawMessage = bankAccount1.withdraw(200);
+        System.out.println(withdrawMessage);
+//        bankAccount1.withdraw(200); // Without withdraw message
+        
         System.out.println(bankAccount1.display());   // this  prints out the details to the console
     }
 }
