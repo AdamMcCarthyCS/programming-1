@@ -17,8 +17,6 @@ public class BankAccount {
         this.accountNumber = accountNumber;
         if (balance >= 0) {
             this.balance = balance;
-        } else {
-            this.balance = 0;
         }
     }
     
@@ -73,7 +71,9 @@ public class BankAccount {
     }
     
     public void setBalance(double balance) {
-        this.balance = balance;
+        if (balance >= 0) {
+            this.balance = balance;
+        }
     }
     
 }
