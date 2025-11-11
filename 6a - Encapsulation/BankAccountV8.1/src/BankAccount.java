@@ -15,7 +15,11 @@ public class BankAccount {
     public BankAccount(String name, String accountNumber, double balance){
         this.name = name;
         this.accountNumber = accountNumber;
-        this.balance = balance;
+        if (balance >= 0) {
+            this.balance = balance;
+        } else {
+            this.balance = 0;
+        }
     }
     
     //---------------//
