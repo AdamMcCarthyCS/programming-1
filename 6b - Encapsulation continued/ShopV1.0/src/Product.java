@@ -75,18 +75,38 @@ public class Product {
         return isCurrentProductLine;
     }
     
+    /**
+     * Sets the product name.
+     *
+     * @param productName       a new name for the product
+     */
     public void setProductName(String productName) {
         this.productName = productName;
     }
     
+    /**
+     * Sets the product code.
+     *
+     * @param productCode       a new numeric code for the product
+     */
     public void setProductCode(int productCode) {
         this.productCode = productCode;
     }
     
+    /**
+     * Sets the unit cost of the product
+     *
+     * @param unitCost          a new unit cost for the product
+     */
     public void setUnitCost(double unitCost) {
         this.unitCost = unitCost;
     }
     
+    /**
+     * Sets if the product is currently in the product line
+     *
+     * @param isCurrentProductLine  sets whether the product is part of the current product line
+     */
     public void setIsCurrentProductLine(boolean isCurrentProductLine) {
         this.isCurrentProductLine = isCurrentProductLine;
     }
