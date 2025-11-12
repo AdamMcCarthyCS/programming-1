@@ -42,6 +42,14 @@ public class Driver {
             inCurrentProductLine = true;
         }
         
-        product = new Product(productName, productCode, unitCost, inCurrentProductLine);
+        product = new Product(productName, productCode, unitCost, inCurrentProductLine)
+    }
+    
+    /**
+     * Prints the string representation of a product.
+     */
+    public void printProduct() {
+        // Print the string representation of the product.
+        System.out.println(product.toString());
     }
 }
