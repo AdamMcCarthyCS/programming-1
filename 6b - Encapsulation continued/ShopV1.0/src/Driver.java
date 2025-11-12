@@ -26,6 +26,13 @@ public class Driver {
         driver.printProduct();
     }
     
+    /**
+     * Creates a product by reading in information from the user
+     *
+     * <p>This method reads a product name, code, unit cost, and whether a product is part of
+     * the current product line and then instantiates a product instance. This instance
+     * instantiated is the one declared as a field in the {@code Driver} class.</p>
+     */
     public void addProduct() {
         // Read in the product name, code, and unit cost from the user.
         System.out.print("Enter the product name: ");
