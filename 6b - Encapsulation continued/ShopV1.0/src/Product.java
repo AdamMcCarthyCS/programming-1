@@ -75,5 +75,19 @@ public class Product {
         return isCurrentProductLine;
     }
     
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
     
+    public void setProductCode(int productCode) {
+        this.productCode = productCode;
+    }
+    
+    public void setUnitCost(double unitCost) {
+        this.unitCost = unitCost;
+    }
+    
+    public void setIsCurrentProductLine(boolean isCurrentProductLine) {
+        this.isCurrentProductLine = isCurrentProductLine;
+    }
 }
