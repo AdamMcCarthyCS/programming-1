@@ -116,6 +116,7 @@ public class Product {
      *
      * @return  a formatted string with the product name, code, price, and product line status
      */
+    @Override
     public String toString() {
         return "Product:\n" +
             "\tName: " + productName + "\n"
