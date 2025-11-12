@@ -110,4 +110,17 @@ public class Product {
     public void setIsCurrentProductLine(boolean isCurrentProductLine) {
         this.isCurrentProductLine = isCurrentProductLine;
     }
+    
+    /**
+     * Prints a string representation of the product
+     *
+     * @return  a formatted string with the product name, code, price, and product line status
+     */
+    public String toString() {
+        return "Product:\n" +
+            "\tName: " + productName + "\n"
+            + "\tCode: " + productCode + "\n"
+            + "\tUnit Price: €" + unitCost + "\n"
+            + "\tIn product line: " + isCurrentProductLine;
+    }
 }
