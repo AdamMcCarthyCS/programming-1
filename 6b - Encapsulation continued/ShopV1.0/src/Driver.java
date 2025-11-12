@@ -21,7 +21,9 @@ public class Driver {
      * @param args  array of string arguments from command line
      */
     public static void main(String[] args) {
-    
+        Driver driver = new Driver();
+        driver.addProduct();
+        driver.printProduct();
     }
     
     public void addProduct() {
@@ -38,11 +40,11 @@ public class Driver {
         System.out.print("Is this product in your current line (y/n): ");
         char currentProduct = input.next().charAt(0);
         boolean inCurrentProductLine = false;
-        if ( Character.toLowerCase(currentProduct) == 'c') {
+        if ( Character.toLowerCase(currentProduct) == 'y') {
             inCurrentProductLine = true;
         }
         
-        product = new Product(productName, productCode, unitCost, inCurrentProductLine)
+        product = new Product(productName, productCode, unitCost, inCurrentProductLine);
     }
     
     /**
