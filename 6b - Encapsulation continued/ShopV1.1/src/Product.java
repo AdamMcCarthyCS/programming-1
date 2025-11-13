@@ -39,7 +39,12 @@ public class Product {
         } else {
             this.productName = productName.substring(0, 20);
         }
-        this.productCode = productCode;
+        
+        // Validate productCode to be between 1000 and 9999 or set default of 9999.
+        if (productCode >= 1000 && productCode <= 9999) {
+            this.productCode = productCode;
+        }
+        
         this.unitCost = unitCost;
         this.isCurrentProductLine = isCurrentProductLine;
     }
@@ -79,7 +84,7 @@ public class Product {
     }
     
     /**
-     * Sets the product name.
+     * Sets the product name if it is valid length of 20 chars or less.
      *
      * @param productName       a new name for the product
      */
@@ -91,12 +96,14 @@ public class Product {
     }
     
     /**
-     * Sets the product code.
+     * Sets the product code if it is a valid value between 1000 and 9999.
      *
      * @param productCode       a new numeric code for the product
      */
     public void setProductCode(int productCode) {
-        this.productCode = productCode;
+        if (productCode >= 1000 && productCode <= 9999) {
+            this.productCode = productCode;
+        }
     }
     
     /**
