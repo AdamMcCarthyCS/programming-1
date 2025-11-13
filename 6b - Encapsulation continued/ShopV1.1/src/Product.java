@@ -6,21 +6,21 @@
  */
 public class Product {
     /**
-     * The name of the product.
+     * Name of product initialised to a default empty String.
      */
-    private String productName;
+    private String productName = "";
     /**
-     * The numeric product code.
+     * Numeric product code initialised to default 9999.
      */
-    private int productCode;
+    private int productCode = 9999;
     /**
-     * The cost per unit of the product.
+     * Cost per unit of the product initialised to default of 0.
      */
-    private double unitCost;
+    private double unitCost = 0;
     /**
-     * Whether the product is part of the current product line.
+     * Current product line status initialised to default value false.
      */
-    private boolean isCurrentProductLine;
+    private boolean isCurrentProductLine = false;
     
     /**
      * Constructs a new product with the specified products name, product code, unit cost and if
