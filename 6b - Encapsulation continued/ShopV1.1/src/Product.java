@@ -34,10 +34,10 @@ public class Product {
     public Product(String productName, int productCode, double unitCost,
        boolean isCurrentProductLine) {
         // Truncate product name to 20 characters if it exceeds this length.
-        if (productName.length() <= 20) {
+        if (productName.length() <= 10) {
             this.productName = productName;
         } else {
-            this.productName = productName.substring(0, 20);
+            this.productName = productName.substring(0, 10);
         }
         
         // Validate productCode to be between 1000 and 9999 or set default of 9999.
@@ -94,7 +94,7 @@ public class Product {
      */
     public void setProductName(String productName) {
         // Update product name if it is less than 20 chars
-        if (productName.length() <= 20) {
+        if (productName.length() <= 10) {
             this.productName = productName;
         }
     }
