@@ -2,7 +2,7 @@
  * Represents a product that is in a shops inventory.
  *
  * @author      Adam McCarthy
- * @version     1.0
+ * @version     1.1
  */
 public class Product {
     /**
@@ -10,9 +10,9 @@ public class Product {
      */
     private String productName = "";
     /**
-     * Numeric product code initialised to default 9999.
+     * Numeric product code initialised to default 999.
      */
-    private int productCode = 9999;
+    private int productCode = 999;
     /**
      * Cost per unit of the product initialised to default of 0.
      */
@@ -41,7 +41,7 @@ public class Product {
         }
         
         // Validate productCode to be between 1000 and 9999 or set default of 9999.
-        if (productCode >= 1000 && productCode <= 9999) {
+        if (productCode >= 100 && productCode <= 999) {
             this.productCode = productCode;
         }
         
@@ -88,7 +88,7 @@ public class Product {
     }
     
     /**
-     * Sets the product name if it is valid length of 20 chars or less.
+     * Sets the product name if it is valid length of 10 chars or less.
      *
      * @param productName       a new name for the product
      */
@@ -100,12 +100,12 @@ public class Product {
     }
     
     /**
-     * Sets the product code if it is a valid value between 1000 and 9999.
+     * Sets the product code if it is a valid value between 100 and 999.
      *
      * @param productCode       a new numeric code for the product
      */
     public void setProductCode(int productCode) {
-        if (productCode >= 1000 && productCode <= 9999) {
+        if (productCode >= 100 && productCode <= 999) {
             this.productCode = productCode;
         }
     }
