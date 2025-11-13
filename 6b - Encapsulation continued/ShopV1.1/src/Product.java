@@ -18,7 +18,7 @@ public class Product {
      */
     private double unitCost = 0;
     /**
-     * Current product line status initialised to default value false.
+     * Whether the product is part of the current product line, initialised to default value false.
      */
     private boolean isCurrentProductLine = false;
     
@@ -33,7 +33,12 @@ public class Product {
      */
     public Product(String productName, int productCode, double unitCost,
        boolean isCurrentProductLine) {
-        this.productName = productName;
+        // Truncate product name to 20 characters if it exceeds this length.
+        if (productName.length() <= 20) {
+            this.productName = productName;
+        } else {
+            this.productName = productName.substring(0, 20);
+        }
         this.productCode = productCode;
         this.unitCost = unitCost;
         this.isCurrentProductLine = isCurrentProductLine;
@@ -44,9 +49,7 @@ public class Product {
      *
      * @return      the name of the product
      */
-    public String getProductName() {
-        return productName;
-    }
+    public String getProductName() { return productName; }
     
     /**
      * Returns the product code.
@@ -81,7 +84,10 @@ public class Product {
      * @param productName       a new name for the product
      */
     public void setProductName(String productName) {
-        this.productName = productName;
+        // Update product name if it is less than 20 chars
+        if (productName.length() <= 20) {
+            this.productName = productName;
+        }
     }
     
     /**
