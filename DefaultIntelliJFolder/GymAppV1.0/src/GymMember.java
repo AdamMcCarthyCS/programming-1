@@ -24,11 +24,29 @@ public class GymMember {
     /**
      * The gym members membership number.
      */
-    private int memberShipNumber = 99999;
+    private int membershipNumber = 99999;
     /**
      * Whether the person is currently a gym member, represented by true or false.
      */
     private boolean currentGymMember = false;
+    
+    /**
+     * Constructs a GymMember object.
+     *
+     * @param name              the member's full name
+     * @param height            the member's height in meters
+     * @param weight            the member's weight in kg
+     * @param membershipNumber  the membership number
+     * @param currentGymMember  whether the membership is currently active
+     */
+    public GymMember(String name, double height, double weight, int membershipNumber,
+                     boolean currentGymMember) {
+        this.name = name;
+        this.height = height;
+        this.weight = weight;
+        this.membershipNumber = membershipNumber;
+        this.currentGymMember = currentGymMember;
+    }
     
     public String getName() {
         return name;
@@ -43,7 +61,7 @@ public class GymMember {
     }
     
     public int getMemberShipNumber() {
-        return memberShipNumber;
+        return membershipNumber;
     }
     
     public boolean isCurrentGymMember() {
@@ -63,7 +81,7 @@ public class GymMember {
     }
     
     public void setMemberShipNumber(int memberShipNumber) {
-        this.memberShipNumber = memberShipNumber;
+        this.membershipNumber = memberShipNumber;
     }
     
     public void setCurrentGymMember(boolean currentGymMember) {
