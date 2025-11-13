@@ -29,4 +29,44 @@ public class GymMember {
      * Whether the person is currently a gym member, represented by true or false.
      */
     private boolean currentGymMember = false;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public double getHeight() {
+        return height;
+    }
+    
+    public double getWeight() {
+        return weight;
+    }
+    
+    public int getMemberShipNumber() {
+        return memberShipNumber;
+    }
+    
+    public boolean isCurrentGymMember() {
+        return currentGymMember;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public void setHeight(double height) {
+        this.height = height;
+    }
+    
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+    
+    public void setMemberShipNumber(int memberShipNumber) {
+        this.memberShipNumber = memberShipNumber;
+    }
+    
+    public void setCurrentGymMember(boolean currentGymMember) {
+        this.currentGymMember = currentGymMember;
+    }
 }
