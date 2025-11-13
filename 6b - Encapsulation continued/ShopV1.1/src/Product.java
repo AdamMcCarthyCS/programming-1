@@ -45,7 +45,11 @@ public class Product {
             this.productCode = productCode;
         }
         
-        this.unitCost = unitCost;
+        // Validate unitCost to be non-negative.
+        if (unitCost > 0) {
+            this.unitCost = unitCost;
+        }
+        
         this.isCurrentProductLine = isCurrentProductLine;
     }
     
@@ -107,12 +111,15 @@ public class Product {
     }
     
     /**
-     * Sets the unit cost of the product
+     * Sets the unit cost of the product if it is non-negative.
      *
      * @param unitCost          a new unit cost for the product
      */
     public void setUnitCost(double unitCost) {
-        this.unitCost = unitCost;
+        // Validate unitCost to be non-negative.
+        if (unitCost > 0) {
+            this.unitCost = unitCost;
+        }
     }
     
     /**
