@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * This is the entry point to the program. It controls all user input and output.
  *
@@ -6,6 +8,14 @@
  * @see         GymMember
  */
 public class Driver {
+    /**
+     * A {@code Scanner} object used to read in user input.
+     */
+    private Scanner input = new Scanner(System.in);
+    /**
+     * A {@code GymMember} object with the user will provide the details for.
+     */
+    private GymMember member;
     
     /**
      * Program starts here.
