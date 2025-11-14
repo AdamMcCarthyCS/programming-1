@@ -13,6 +13,7 @@ public class Driver {
      * @param args      a {@code String} array of command line arguments
      */
     public static void main(String[] args) {
-    
+        GymMember member = new GymMember("Adam", 179, 85.5, 1234, true);
+        System.out.println(member);
     }
 }

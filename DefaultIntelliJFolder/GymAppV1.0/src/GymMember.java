@@ -12,7 +12,7 @@ public class GymMember {
     /**
      * The gym members full name.
      */
-    private String name = "";
+    private String name = "N/A";
     /**
      * The gym members weight in kilograms.
      */
@@ -136,5 +136,18 @@ public class GymMember {
      */
     public void setCurrentGymMember(boolean currentGymMember) {
         this.currentGymMember = currentGymMember;
+    }
+    
+    /**
+     * Returns a string representation of the member's details
+     *
+     * @return  a formatted version of the members details including the name, height, weight,
+     * membership number, and whether the membership is active or not
+     */
+    @Override
+    public String toString() {
+        return String.format("Member Details:\n\tName: %s\n\tHeight: %.2fm\n\tWeight: %.2fkg"
+            + "\n\tMembership Number: %d\n\tMembership Active: %b", name, height, weight,
+            membershipNumber, currentGymMember);
     }
 }
