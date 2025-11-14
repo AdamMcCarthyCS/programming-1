@@ -31,7 +31,10 @@ public class GymMember {
     private boolean currentGymMember = false;
     
     /**
-     * Constructs a GymMember object.
+     * Constructs a GymMember object where:
+     * <ul>
+     *     <li>The username is 30 characters or fewer</li>
+     * </ul>
      *
      * @param name              the member's full name
      * @param height            the member's height in meters
@@ -41,7 +44,11 @@ public class GymMember {
      */
     public GymMember(String name, double height, double weight, int membershipNumber,
                      boolean currentGymMember) {
-        this.name = name;
+        if (name.length() <= 30) {
+            this.name = name;
+        } else {
+            this.name = name.substring(0, 30);
+        }
         this.height = height;
         this.weight = weight;
         this.membershipNumber = membershipNumber;
@@ -94,12 +101,14 @@ public class GymMember {
     }
     
     /**
-     * Sets a name for the gym member.
+     * Sets a name for the gym member if the proposed name is 30 characters or fewer
      *
      * @param name  the new name of the gym member
      */
     public void setName(String name) {
-        this.name = name;
+        if (name.length() <= 30) {
+            this.name = name;
+        }
     }
     
     /**
