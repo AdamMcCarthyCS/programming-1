@@ -49,7 +49,9 @@ public class GymMember {
         } else {
             this.name = name.substring(0, 30);
         }
-        this.height = height;
+        if (height >= 0.5 && height < 3.0) {
+            this.height = height;
+        }
         this.weight = weight;
         this.membershipNumber = membershipNumber;
         this.currentGymMember = currentGymMember;
@@ -101,7 +103,7 @@ public class GymMember {
     }
     
     /**
-     * Sets a name for the gym member if the proposed name is 30 characters or fewer
+     * Sets a name for the gym member if the argument is 30 characters or fewer.
      *
      * @param name  the new name of the gym member
      */
@@ -112,12 +114,14 @@ public class GymMember {
     }
     
     /**
-     * Sets a new height for the gym member.
+     * Sets a new height for the gym member if the argument is between 0.5 and 3.
      *
      * @param height    the new height of the gym member
      */
     public void setHeight(double height) {
-        this.height = height;
+        if (height >= 0.5 && height < 3.0) {
+            this.height = height;
+        }
     }
     
     /**
