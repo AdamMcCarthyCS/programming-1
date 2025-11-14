@@ -26,4 +26,19 @@ public class Driver {
         GymMember member = new GymMember("Adam", 179, 85.5, 1234, true);
         System.out.println(member);
     }
+    
+    /**
+     * Creates a new GymMember object
+     *
+     * @param name              the member's name
+     * @param height            the member's height in meters
+     * @param weight            the member's weight in kilograms
+     * @param membershipNumber  the member's membership number
+     * @param currentGymMember  whether the member's gym membership is currently active
+     */
+    public void addGymMember(String name, double height, double weight, int membershipNumber,
+                             boolean currentGymMember) {
+        // instantiate an instance of GymMember
+        this.member = new GymMember(name, height, weight, membershipNumber, currentGymMember);
+    }
 }
