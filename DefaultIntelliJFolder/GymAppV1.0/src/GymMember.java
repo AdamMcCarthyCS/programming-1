@@ -48,42 +48,92 @@ public class GymMember {
         this.currentGymMember = currentGymMember;
     }
     
+    /**
+     * Returns the name of the gym member.
+     *
+     * @return      the gym member's full name
+     */
     public String getName() {
         return name;
     }
     
+    /**
+     * Returns the height of the gym member.
+     *
+     * @return      the gym member's height in meters
+     */
     public double getHeight() {
         return height;
     }
     
+    /**
+     * Returns the weight of the gym member.
+     *
+     * @return      the gym member's weight in kilograms
+     */
     public double getWeight() {
         return weight;
     }
     
+    /**
+     * Returns the membership number of the gym member.
+     *
+     * @return      the integer membership number of the gym member
+     */
     public int getMemberShipNumber() {
         return membershipNumber;
     }
     
+    /**
+     * Returns whether the person's gym membership is active.
+     *
+     * @return      the membership status (true/false)
+     */
     public boolean isCurrentGymMember() {
         return currentGymMember;
     }
     
+    /**
+     * Sets a name for the gym member.
+     *
+     * @param name  the new name of the gym member
+     */
     public void setName(String name) {
         this.name = name;
     }
     
+    /**
+     * Sets a new height for the gym member.
+     *
+     * @param height    the new height of the gym member
+     */
     public void setHeight(double height) {
         this.height = height;
     }
     
+    /**
+     * Sets a new weight for the gym member
+     *
+     * @param weight    the new weight of the gym member
+     */
     public void setWeight(double weight) {
         this.weight = weight;
     }
     
+    /**
+     * Sets a new membership number for the gym member.
+     *
+     * @param memberShipNumber  the new membership number
+     */
     public void setMemberShipNumber(int memberShipNumber) {
         this.membershipNumber = memberShipNumber;
     }
     
+    /**
+     * Set a new value for whether the persons membership is active
+     *
+     * @param currentGymMember  whether the persons membership is active (true/false)
+     */
     public void setCurrentGymMember(boolean currentGymMember) {
         this.currentGymMember = currentGymMember;
     }
