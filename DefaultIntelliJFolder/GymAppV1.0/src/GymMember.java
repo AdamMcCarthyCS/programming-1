@@ -52,7 +52,9 @@ public class GymMember {
         if (height >= 0.5 && height < 3.0) {
             this.height = height;
         }
-        this.weight = weight;
+        if (weight > 25 && weight < 600) {
+            this.weight = weight;
+        }
         this.membershipNumber = membershipNumber;
         this.currentGymMember = currentGymMember;
     }
@@ -114,7 +116,7 @@ public class GymMember {
     }
     
     /**
-     * Sets a new height for the gym member if the argument is between 0.5 and 3.
+     * Sets a new height for the gym member if the argument is between 0.5m and 3m inclusive
      *
      * @param height    the new height of the gym member
      */
@@ -125,12 +127,14 @@ public class GymMember {
     }
     
     /**
-     * Sets a new weight for the gym member
+     * Sets a new weight for the gym member if the argument is between 25kg and 600kg inclusive.
      *
      * @param weight    the new weight of the gym member
      */
     public void setWeight(double weight) {
-        this.weight = weight;
+        if (weight > 25 && weight < 600) {
+            this.weight = weight;
+        }
     }
     
     /**
