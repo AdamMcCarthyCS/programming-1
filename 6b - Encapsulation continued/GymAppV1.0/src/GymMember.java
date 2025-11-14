@@ -168,8 +168,8 @@ public class GymMember {
      */
     @Override
     public String toString() {
-        return String.format("Member Details:\n\tName: %s\n\tHeight: %.2fm\n\tWeight: %.2fkg"
-            + "\n\tMembership Number: %5d\n\tMembership Active: %b", name, height, weight,
+        return String.format("Member Details:\n\tName: %s\n\tHeight: %.2fm\n\tWeight: %.1fkg"
+            + "\n\tMembership Number: %05d\n\tMembership Active: %b", name, height, weight,
             membershipNumber, currentGymMember);
     }
 }
