@@ -55,7 +55,9 @@ public class GymMember {
         if (weight > 25 && weight < 600) {
             this.weight = weight;
         }
-        this.membershipNumber = membershipNumber;
+        if (membershipNumber >= 1 && membershipNumber < 99999) {
+            this.membershipNumber = membershipNumber;
+        }
         this.currentGymMember = currentGymMember;
     }
     
@@ -138,12 +140,15 @@ public class GymMember {
     }
     
     /**
-     * Sets a new membership number for the gym member.
+     * Sets a new membership number for the gym member if the argument is between 1 (inclusive)
+     * and 99999 (exclusive).
      *
      * @param memberShipNumber  the new membership number
      */
     public void setMemberShipNumber(int memberShipNumber) {
-        this.membershipNumber = memberShipNumber;
+        if (membershipNumber >= 1 && membershipNumber < 99999) {
+            this.membershipNumber = membershipNumber;
+        }
     }
     
     /**
