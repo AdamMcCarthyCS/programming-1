@@ -62,10 +62,25 @@ public class Driver{
         }
 
     }
-    
-    //print the product (the toString method is automatically called).
+
+    /**
+     * Prints all products in the store.
+     */
     private void printProduct(){
     	System.out.println(store.listProducts());
     }
-	   	
+
+    /**
+     * Prints the name of the cheapest product in the store.
+     */
+    private void printCheapestProduct(){
+        Product cheapestProduct = store.cheapestProduct();
+        if (cheapestProduct == null) {
+            System.out.println("There are no products in the store.");
+        } else {
+            System.out.println("The cheapest product is: " + cheapestProduct + ".");
+        }
+    }
+
+
 }
