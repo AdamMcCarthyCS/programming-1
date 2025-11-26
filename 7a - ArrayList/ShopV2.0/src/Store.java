@@ -18,7 +18,7 @@ public class Store {
         }
         String productList = "";
         for (Product product: products) {
-            productList += " " + product;
+            productList += product + " ";
         }
         return productList;
     }

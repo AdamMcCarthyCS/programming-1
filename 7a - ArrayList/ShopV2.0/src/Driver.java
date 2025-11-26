@@ -21,13 +21,12 @@ public class Driver{
      */
     public static void main(String[] args) {
 		Driver driver = new Driver();
-		driver.addProduct();
+		driver.processOrder();
 		driver.printProduct();
 	}
 
     //gather the product data from the user and create a new product object.
     private void addProduct(){
-        input.nextLine(); // Dummy read of string to clear the buffer
 
     	System.out.print("Enter the Product Name:  ");
         String productName = input.nextLine();
@@ -35,7 +34,6 @@ public class Driver{
         int productCode = input.nextInt();
         System.out.print("Enter the Unit Cost:  ");
         double unitCost = input.nextDouble();
-
         //Ask the user to type in either a Y or an N.  This is then
         //converted to either a True or a False (i.e. a boolean value).
     	System.out.print("Is this product in your current line (y/n): ");
@@ -50,22 +48,24 @@ public class Driver{
         } else {
             System.out.println("No product added");
         }
+        input.nextLine();
     }
 
     public void processOrder() {
         store = new Store();
-        System.out.println("Do you want to add a new product? (y/n)");
+        System.out.print("Do you want to add a new product? (y/n) ");
         char resp = input.nextLine().toLowerCase().charAt(0);
         while (resp == 'y') {
             addProduct();
             System.out.println("Do you want to add a new product? (y/n)");
             resp = input.nextLine().toLowerCase().charAt(0);
         }
+
     }
     
     //print the product (the toString method is automatically called).
     private void printProduct(){
-    	System.out.println(product);
+    	System.out.println(store.listProducts());
     }
 	   	
 }
