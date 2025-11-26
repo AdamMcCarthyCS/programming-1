@@ -142,10 +142,10 @@ public class Store {
         // Empty string to add products that exceed price to
         String productsOverPrice = "";
         // Check each product and add to string if it exceeds price
-        for (Product product: products) {
-            if (product.getUnitCost() > price) {
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getUnitCost() > price) {
                 // Add each product on a new line of the string being returned
-                productsOverPrice += product + "\n";
+                productsOverPrice += i + products.get(i).toString() + "\n";
             }
         }
         return productsOverPrice;
