@@ -32,7 +32,6 @@ public class Driver{
 
     //gather the product data from the user and create a new product object.
     private void addProduct(){
-
     	System.out.print("Enter the Product Name:  ");
         String productName = input.nextLine();
         System.out.print("Enter the Product Code:  ");
@@ -58,12 +57,12 @@ public class Driver{
 
     public void processOrder() {
         store = new Store();
-        System.out.print("Do you want to add a new product? (y/n) ");
-        char resp = input.nextLine().toLowerCase().charAt(0);
-        while (resp == 'y') {
+        System.out.print("How many products would you like to have in your store? ");
+        int numberOfProducts = input.nextInt();
+        input.nextLine();
+        for (int i = 0; i < numberOfProducts; i++) {
             addProduct();
-            System.out.println("Do you want to add a new product? (y/n)");
-            resp = input.nextLine().toLowerCase().charAt(0);
+            System.out.println();
         }
 
     }
@@ -95,7 +94,7 @@ public class Driver{
         if (cheapestProduct == null) {
             System.out.println("There are no products in the store.");
         } else {
-            System.out.println("The cheapest product is: " + cheapestProduct + ".");
+            System.out.println("The cheapest product is: " + cheapestProduct.getProductName() + ".");
         }
     }
 

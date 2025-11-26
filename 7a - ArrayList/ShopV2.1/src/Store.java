@@ -43,7 +43,7 @@ public class Store {
             return "No products";
         }
         // empty product list to add to in the loop below
-        String productList = "";
+        String productList = "List of products are:\n";
 
         // add each product in the list using its string representation
         for (Product product: products) {
@@ -64,7 +64,7 @@ public class Store {
         }
 
         // empty product list to add to in the loop below
-        String currentProductList = "";
+        String currentProductList = "List of CURRENT Products are:\n";
 
         // add each product in the list using its string representation
         for (Product product: products) {
