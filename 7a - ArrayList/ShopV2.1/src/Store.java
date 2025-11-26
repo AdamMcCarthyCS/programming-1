@@ -47,7 +47,7 @@ public class Store {
 
         // add each product in the list using its string representation
         for (int i = 0; i < products.size(); i++) {
-            productList += i + products.get(i).toString() + "\n";
+            productList += i + ": " + products.get(i).toString() + "\n";
         }
         return productList;
     }
@@ -69,7 +69,7 @@ public class Store {
         // add each product in the list using its string representation
         for (int i = 0; i < products.size(); i++) {
             if (products.get(i).isInCurrentProductLine()) {
-                currentProductList += i + products.get(i).toString() + "/n";
+                currentProductList += i + ": " + products.get(i).toString() + "/n";
             }
         }
         return currentProductList;
@@ -145,7 +145,7 @@ public class Store {
         for (int i = 0; i < products.size(); i++) {
             if (products.get(i).getUnitCost() > price) {
                 // Add each product on a new line of the string being returned
-                productsOverPrice += i + products.get(i).toString() + "\n";
+                productsOverPrice += i + ": " + products.get(i).toString() + "\n";
             }
         }
         return productsOverPrice;
