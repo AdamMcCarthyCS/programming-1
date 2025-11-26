@@ -23,7 +23,11 @@ public class Driver{
 		Driver driver = new Driver();
 		driver.processOrder();
 		driver.printProduct();
-
+        driver.printAverageProductPrice();
+        driver.printCheapestProduct();
+        System.out.print("View the products costing more than this price: ");
+        double price = driver.input.nextDouble();
+        driver.printProductsAbovePrice(price);
 	}
 
     //gather the product data from the user and create a new product object.
