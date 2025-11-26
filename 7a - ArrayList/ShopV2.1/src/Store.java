@@ -80,6 +80,28 @@ public class Store {
     }
 
     /**
+     * Calculates the average price of all the products in the store.
+     * <p>Algorithm:</p>
+     * <ol>
+     *     <li>Sum the values of all the products in the store</li>
+     *     <li>Divide the sum by the number of products in the store</li>
+     *     <li>Return the value of the quotient in (2)</li>
+     * </ol>
+     *
+     * @return      the average price of a product in the store
+     */
+    public double averageProductPrice() {
+        if (products.isEmpty()) {
+            return -1;
+        }
+        double sumOfPrices = 0;
+        for (Product product: products) {
+            sumOfPrices += product.getUnitCost();
+        }
+        return sumOfPrices / products.size();
+    }
+
+    /**
      * Prints the lowest price product in the store's product list.
      *
      * <p>Algorithm:</p>
