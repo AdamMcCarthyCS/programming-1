@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Driver{
 
     private Scanner input = new Scanner(System.in);
-    private Product product;
+    private Store store;
 
     /**
      * The main method is the starting point for the program.
@@ -27,6 +27,8 @@ public class Driver{
 
     //gather the product data from the user and create a new product object.
     private void addProduct(){
+        input.nextLine(); // Dummy read of string to clear the buffer
+
     	System.out.print("Enter the Product Name:  ");
         String productName = input.nextLine();
         System.out.print("Enter the Product Code:  ");
@@ -42,7 +44,23 @@ public class Driver{
     	if ((currentProduct == 'y') || (currentProduct == 'Y'))
     		inCurrentProductLine = true;
     	
-        product = new Product(productName, productCode, unitCost, inCurrentProductLine);
+        boolean isAdded = store.add(new Product(productName, productCode, unitCost, inCurrentProductLine));
+        if (isAdded) {
+            System.out.println("Product Added Successfully");
+        } else {
+            System.out.println("No product added");
+        }
+    }
+
+    public void processOrder() {
+        store = new Store();
+        System.out.println("Do you want to add a new product? (y/n)");
+        char resp = input.nextLine().toLowerCase().charAt(0);
+        while (resp == 'y') {
+            addProduct();
+            System.out.println("Do you want to add a new product? (y/n)");
+            resp = input.nextLine().toLowerCase().charAt(0);
+        }
     }
     
     //print the product (the toString method is automatically called).
