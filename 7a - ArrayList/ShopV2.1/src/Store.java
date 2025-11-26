@@ -60,7 +60,7 @@ public class Store {
     public String listCurrentProducts() {
         // If the products list is empty immediately return a message stating this
         if (products.isEmpty()) {
-            return "No products";
+            return "No products in the store";
         }
 
         // empty product list to add to in the loop below
@@ -69,9 +69,40 @@ public class Store {
         // add each product in the list using its string representation
         for (Product product: products) {
             if (product.isInCurrentProductLine()) {
-                currentProductList += product.toString() + "/n";
+                currentProductList += product + "/n";
             }
         }
         return currentProductList;
     }
+
+    public void printAverageProductPrice() {
+
+    }
+
+    /**
+     * Prints the lowest price product in the store's product list.
+     *
+     * <p>Algorithm:</p>
+     * <ol>
+     *     <li>Assume the first object in the product list is the lowest priced</li>
+     *     <li>Traverse the list swapping any object found which is lower in price than the current lowest priced object
+     *     to be the new lowest price object</li>
+     *     <li>When the list has been fully traversed return the current lowest priced object</li>
+     * </ol>
+     */
+    public Product cheapestProduct() {
+        if (products.isEmpty()) {
+            return null;
+        }
+
+        Product cheapestPriceProduct = products.get(0);
+        for (int i = 1; i < products.size(); i++) {
+            Product currentProduct = products.get(i);
+            if (currentProduct.getUnitCost() < cheapestPriceProduct.getUnitCost()) {
+                cheapestPriceProduct = currentProduct;
+            }
+        }
+        return cheapestPriceProduct;
+    }
+
 }
