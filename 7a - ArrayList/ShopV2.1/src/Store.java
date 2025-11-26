@@ -1,25 +1,77 @@
 import java.util.ArrayList;
 
+/**
+ * This is a store class which represents a store containing an inventory of
+ * different products
+ *
+ * @author Adam McCarthy
+ * @version 2.1
+ */
 public class Store {
+    /**
+     * A list of products sold by the store.
+     */
     private ArrayList<Product> products;
 
+    /**
+     * Constructs a {@code Store} object
+     */
     public Store() {
         products = new ArrayList<>();
     }
 
+    /**
+     * Adds a product to the products list.
+     *
+     * @param product   a product object with a name, id, price, and current availability
+     *
+     * @return          a boolean representing whether the object was added to the products list
+     */
     public boolean add(Product product) {
        boolean addedToProducts = products.add(product);
        return addedToProducts;
     }
 
+    /**
+     * Lists the products currently in the store's product list.
+     *
+     * @return          a string representation of all the product in the stores product list
+     */
     public String listProducts() {
+        // If the products list is empty immediately return a message stating this
         if (products.isEmpty()) {
             return "No products";
         }
+        // empty product list to add to in the loop below
         String productList = "";
+
+        // add each product in the list using its string representation
         for (Product product: products) {
             productList += product + "\n";
         }
         return productList;
+    }
+
+    /**
+     * Lists the products currently actively sold and also in the store's product list.
+     *
+     * @return          a string representation of all the currently available products in the stores product list
+     */
+    public String listCurrentProducts() {
+        // If the products list is empty immediately return a message stating this
+        if (products.isEmpty()) {
+            return "No products";
+        }
+
+        // empty product list to add to in the loop below
+        String currentProductList = "";
+
+        // add each product in the list using its string representation
+        for (Product product: products) {
+            if (product.isInCurrentProductLine()) {
+                currentProductList += product.toString() + "/n";
+            }
+        }
+        return currentProductList;
     }
 }
