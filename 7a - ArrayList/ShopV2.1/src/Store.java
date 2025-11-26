@@ -46,8 +46,8 @@ public class Store {
         String productList = "List of products are:\n";
 
         // add each product in the list using its string representation
-        for (Product product: products) {
-            productList += product + "\n";
+        for (int i = 0; i < products.size(); i++) {
+            productList += i + products.get(i).toString() + "\n";
         }
         return productList;
     }
