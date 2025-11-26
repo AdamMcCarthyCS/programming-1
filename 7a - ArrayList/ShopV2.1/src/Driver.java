@@ -23,6 +23,7 @@ public class Driver{
 		Driver driver = new Driver();
 		driver.processOrder();
 		driver.printProduct();
+
 	}
 
     //gather the product data from the user and create a new product object.
@@ -94,6 +95,9 @@ public class Driver{
         }
     }
 
+    private void printProductsAbovePrice(double price) {
+        System.out.println(store.listProductsAbovePrice(price));
+    }
 
 
 
