@@ -71,6 +71,18 @@ public class Driver{
     }
 
     /**
+     * Prints the average product price in the store
+     */
+    private void printAverageProductPrice() {
+        double averagePrice = store.averageProductPrice();
+        if (averagePrice == - 1) {
+            System.out.println("There are no products in the store.");
+        } else {
+            System.out.println("The average product price is: " + averagePrice);
+        }
+    }
+
+    /**
      * Prints the name of the cheapest product in the store.
      */
     private void printCheapestProduct(){
@@ -81,6 +93,8 @@ public class Driver{
             System.out.println("The cheapest product is: " + cheapestProduct + ".");
         }
     }
+
+
 
 
 }
