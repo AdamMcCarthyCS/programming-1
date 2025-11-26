@@ -127,4 +127,28 @@ public class Store {
         return cheapestPriceProduct;
     }
 
+    /**
+     * Returns a string containing all the products for which the price is above a specified value.
+     *
+     * @param price     the price above which products will be returned as part of a string.
+     *
+     * @return          a string containing all the products above the given price.
+     */
+    public String listProductsAbovePrice(double price) {
+        if (products.isEmpty()) {
+            return null;
+        }
+
+        // Empty string to add products that exceed price to
+        String productsOverPrice = "";
+        // Check each product and add to string if it exceeds price
+        for (Product product: products) {
+            if (product.getUnitCost() > price) {
+                // Add each product on a new line of the string being returned
+                productsOverPrice += product + "\n";
+            }
+        }
+        return productsOverPrice;
+    }
+
 }
