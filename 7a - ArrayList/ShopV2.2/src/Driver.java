@@ -20,15 +20,7 @@ public class Driver{
      * @param args  Any arguments for the main method
      */
     public static void main(String[] args) {
-		Driver driver = new Driver();
-		driver.processOrder();
-		driver.printProducts();
-        driver.printCurrentProducts();
-        driver.printAverageProductPrice();
-        driver.printCheapestProduct();
-        System.out.print("View the products costing more than this price: ");
-        double price = driver.input.nextDouble();
-        driver.printProductsAbovePrice();
+		new Driver();
 	}
 
     //gather the product data from the user and create a new product object.
