@@ -69,7 +69,7 @@ public class Store {
         // add each product in the list using its string representation
         for (int i = 0; i < products.size(); i++) {
             if (products.get(i).isInCurrentProductLine()) {
-                currentProductList += i + ": " + products.get(i).toString() + "/n";
+                currentProductList += i + ": " + products.get(i).toString() + "\n";
             }
         }
         return currentProductList;

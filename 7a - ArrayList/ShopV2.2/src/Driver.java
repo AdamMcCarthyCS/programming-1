@@ -88,10 +88,11 @@ public class Driver{
      */
     private void printAverageProductPrice() {
         double averagePrice = store.averageProductPrice();
+        String averagePriceFormated = String.format("%.2f", averagePrice);
         if (averagePrice == - 1) {
             System.out.println("There are no products in the store.");
         } else {
-            System.out.println("The average product price is: " + averagePrice);
+            System.out.println("The average product price is: €" + averagePriceFormated);
         }
     }
 
@@ -111,9 +112,8 @@ public class Driver{
      * Ask user to enter a price then list all products more expensive than that price.
      */
     private void printProductsAbovePrice() {
-        System.out.println("Enter a price above which all products are printed: ");
+        System.out.print("Enter a price above which all products are printed: ");
         double price = input.nextDouble();
-        input.nextLine();
         System.out.println(store.listProductsAbovePrice(price));
     }
 
@@ -132,8 +132,7 @@ public class Driver{
                     4) Display cheapest product
                     5) List products that are more expensive than a given price
                     0) Exit
-                 ==>>
-                """);
+                 ==>>""" + " ");
         int option = input.nextInt();
         return option;
     }
@@ -151,7 +150,7 @@ public class Driver{
                 case 3 -> printAverageProductPrice();
                 case 4 -> printCheapestProduct();
                 case 5 -> printProductsAbovePrice();
-                default -> System.out.println("Invalid option entered " + option);
+                default -> System.out.println("Invalid option entered: " + option);
             }
 
             // Pause program to allow user to read instructions in terminal
