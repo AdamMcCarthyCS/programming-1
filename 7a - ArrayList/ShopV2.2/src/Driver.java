@@ -138,6 +138,32 @@ public class Driver{
     }
 
     private void runMenu() {
+        int option = mainMenu();
 
+        // Use a loop to continue asking user for selections until 0 is entered
+        while(option != 0) {
+
+            // Call the appropriate method based on the user choice
+            switch (option) {
+                case 1 -> printProducts();
+                case 2 -> printCurrentProducts();
+                case 3 -> printAverageProductPrice();
+                case 4 -> printCheapestProduct();
+                case 5 -> printProductsAbovePrice();
+                default -> System.out.println("Invalid option entered " + option);
+            }
+
+            // Pause program to allow user to read instructions in terminal
+            System.out.println("\nPress enter key to continue...");
+            input.nextLine();
+            input.nextLine(); // Second read due to bug in scanner
+
+            // Display main menu again
+            option = mainMenu();
+        }
+
+        // In this path the user chose option 0, so exit the program
+        System.out.println("Exiting the program. Goodbye.");
+        System.exit(0);
     }
 }
