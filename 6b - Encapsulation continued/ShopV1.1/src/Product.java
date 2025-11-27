@@ -40,15 +40,11 @@ public class Product {
             this.productName = productName.substring(0, 10);
         }
         
-        // Validate productCode to be between 1000 and 9999 or set default of 9999.
-        if (productCode >= 100 && productCode <= 999) {
-            this.productCode = productCode;
-        }
+        // Validate productCode using setter
+        setProductCode(productCode);
         
         // Validate unitCost to be non-negative.
-        if (unitCost > 0) {
-            this.unitCost = unitCost;
-        }
+        setUnitCost(unitCost);
         
         this.isCurrentProductLine = isCurrentProductLine;
     }
