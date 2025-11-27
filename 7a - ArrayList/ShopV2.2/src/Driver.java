@@ -22,7 +22,8 @@ public class Driver{
     public static void main(String[] args) {
 		Driver driver = new Driver();
 		driver.processOrder();
-		driver.printProduct();
+		driver.printProducts();
+        driver.printCurrentProducts();
         driver.printAverageProductPrice();
         driver.printCheapestProduct();
         System.out.print("View the products costing more than this price: ");
@@ -70,8 +71,15 @@ public class Driver{
     /**
      * Prints all products in the store.
      */
-    private void printProduct(){
+    private void printProducts(){
     	System.out.println(store.listProducts());
+    }
+
+    /**
+     * Prints all products currently in the store.
+     */
+    private void printCurrentProducts() {
+        System.out.println(store.listCurrentProducts());
     }
 
     /**
@@ -102,6 +110,28 @@ public class Driver{
         System.out.println(store.listProductsAbovePrice(price));
     }
 
+    /**
+     * Prints menu options for user and reads in their selection
+     *
+     * @return      the integer menu option the user selects
+     */
+    private int mainMenu() {
+        System.out.print("""
+                Shop Menu
+                ---------
+                    1) List the Products
+                    2) List the Current Products
+                    3) Display average product unit cost
+                    4) Display cheapest product
+                    5) List products that are more expensive than a given price
+                    0) Exit
+                 ==>>
+                """);
+        int option = input.nextInt();
+        return option;
+    }
 
+    private void runMenu() {
 
+    }
 }
