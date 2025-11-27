@@ -28,7 +28,7 @@ public class Driver{
         driver.printCheapestProduct();
         System.out.print("View the products costing more than this price: ");
         double price = driver.input.nextDouble();
-        driver.printProductsAbovePrice(price);
+        driver.printProductsAbovePrice();
 	}
 
     //gather the product data from the user and create a new product object.
@@ -106,7 +106,13 @@ public class Driver{
         }
     }
 
-    private void printProductsAbovePrice(double price) {
+    /**
+     * Ask user to enter a price then list all products more expensive than that price.
+     */
+    private void printProductsAbovePrice() {
+        System.out.println("Enter a price above which all products are printed: ");
+        double price = input.nextDouble();
+        input.nextLine();
         System.out.println(store.listProductsAbovePrice(price));
     }
 
