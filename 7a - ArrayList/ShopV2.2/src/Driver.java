@@ -13,6 +13,15 @@ public class Driver{
     private Store store;
 
     /**
+     * Constructs a Driver object which begins the program by asking the size of the store then entering
+     * the looping menu.
+     */
+    public Driver() {
+        processOrder();
+        runMenu();
+    }
+
+    /**
      * The main method is the starting point for the program.
      * When started, the main method calls the addProduct() method
      * followed by the printProduct() method.
