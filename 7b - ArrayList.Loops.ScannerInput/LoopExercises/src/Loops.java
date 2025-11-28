@@ -33,8 +33,10 @@ public class Loops {
 //        System.out.println();
 //        loops.exercise_2();
 //        // Add newline for readable output
+//        System.out.println();
+//        loops.exercise_3();
         System.out.println();
-        loops.exercise_3();
+        loops.exercise_4();
     }
 
     private void simpleWhile() {
@@ -118,6 +120,42 @@ public class Loops {
                 whileCounter++;
             } else {
                 whileCounter = 0;
+            }
+        }
+
+        // Add newline for readable output
+        System.out.println();
+
+        // Add counter to help with formatting printed output
+        int forEachCounter = 1;
+        // Print the stored Strings to the standard output
+        for (String string: strings) {
+            System.out.println("String " + forEachCounter + ": " + string);
+            forEachCounter++;
+        }
+    }
+
+    /**
+     * This method reads in strings from the user until they enter the string -end. It then
+     * prints any strings that have been entered by the user.
+     */
+    private void exercise_4() {
+        strings = new ArrayList<>();
+
+        // Sentinel value to begin while loop
+        boolean sentinel = true;
+        // Counter to help with fomatting of user prompt
+        int whileCounter = 1;
+        // Prompt user to enter six strings and store in an ArrayList for printing
+        while (sentinel) {
+            System.out.print("Enter string " + whileCounter + "/n : ");
+            String userString = input.nextLine();
+            // Add user input to ArrayList if it is not the exit keyword, otherwise exit loop.
+            if (!(userString.startsWith("end"))) {
+                strings.add(userString);
+                whileCounter++;
+            } else {
+                sentinel = false;
             }
         }
 
