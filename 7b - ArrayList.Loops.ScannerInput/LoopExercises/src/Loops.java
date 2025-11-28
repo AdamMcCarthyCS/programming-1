@@ -29,6 +29,9 @@ public class Loops {
         // Add newline for readable output
         System.out.println();
         loops.exercise_1();
+        // Add newline for readable output
+        System.out.println();
+        loops.exercise_2();
     }
 
     private void simpleWhile() {
@@ -73,22 +76,21 @@ public class Loops {
     private void exercise_2() {
         strings = new ArrayList<>();
 
-        // Sentinel value to begin while loop
-        int counter = 1;
         // Prompt user to enter six strings and store in an ArrayList for printing
-        while (counter <= 6) {
-            System.out.print("Enter string " + counter + "/6 : ");
+        for (int i = 1; i <= 6; i++) {
+            System.out.print("Enter string " + i + "/6 : ");
             strings.add(input.nextLine());
-            counter++;
         }
         // Add newline for readable output
         System.out.println();
 
         // Print the six stored Strings to the standard output
         System.out.println("You entered:");
-        for (int i = 1; i <= 6; i++) {
-            System.out.println("String " + i + ": " + strings.get(i - 1));
+        // Add a counter to help with formatting the printed output
+        int counter = 1;
+        for (String string: strings) {
+            System.out.println("String " + counter + ": " + string);
+            counter++;
         }
     }
-
 }
