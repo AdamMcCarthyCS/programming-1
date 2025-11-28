@@ -21,11 +21,14 @@ public class Loops {
      * This is the entry point to the program. It creates an instance of the class and calls a
      * method to print a loop.
      *
-     * @param args      a string array of command line arguments (unused)
+     * @param args a string array of command line arguments (unused)
      */
     public static void main(String[] args) {
         Loops loops = new Loops();
         loops.simpleWhile();
+        // Add newline for readable output
+        System.out.println();
+        loops.exercise_1();
     }
 
     private void simpleWhile() {
@@ -33,9 +36,59 @@ public class Loops {
 
         // Count from 1 to 10 and print each value on a new line
         int i = 1;
-        while(i <= 10) {
+        while (i <= 10) {
             System.out.println(i);
             i++;
         }
     }
+
+    /**
+     * This method reads in six strings from the user, stores them in an ArrayList and then
+     * prints them out to the standard output.
+     */
+    private void exercise_1() {
+        strings = new ArrayList<>();
+
+        // Sentinel value to begin while loop
+        int counter = 1;
+        // Prompt user to enter six strings and store in an ArrayList for printing
+        while (counter <= 6) {
+            System.out.print("Enter string " + counter + "/6 : ");
+            strings.add(input.nextLine());
+            counter++;
+        }
+        // Add newline for readable output
+        System.out.println();
+
+        // Print the six stored Strings to the standard output
+        for (int i = 1; i <= 6; i++) {
+            System.out.println("String " + i + ": " + strings.get(i - 1));
+        }
+    }
+
+    /**
+     * This method reads in six strings from the user, stores them in an ArrayList and then
+     * prints them out to the standard output.
+     */
+    private void exercise_2() {
+        strings = new ArrayList<>();
+
+        // Sentinel value to begin while loop
+        int counter = 1;
+        // Prompt user to enter six strings and store in an ArrayList for printing
+        while (counter <= 6) {
+            System.out.print("Enter string " + counter + "/6 : ");
+            strings.add(input.nextLine());
+            counter++;
+        }
+        // Add newline for readable output
+        System.out.println();
+
+        // Print the six stored Strings to the standard output
+        System.out.println("You entered:");
+        for (int i = 1; i <= 6; i++) {
+            System.out.println("String " + i + ": " + strings.get(i - 1));
+        }
+    }
+
 }
