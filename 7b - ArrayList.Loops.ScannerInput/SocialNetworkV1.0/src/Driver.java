@@ -48,4 +48,40 @@ public class Driver {
         // Add newline formatting for easier reading
         System.out.println();
     }
+
+    private int mainMenu() {
+        int option = ScannerInput.readNextInt("""
+                Social Network Menu
+                    ---------------------
+                    1) Add a Message Post
+                    2) List all Posts
+                    ---------------------
+                    0) Exit
+                 ==>>""" + " ");
+        return option;
+    }
+
+    /**
+     * Prints all stored posts.
+     */
+    private void listAllPosts() {
+        System.out.println(newsfeed.show());
+    }
+
+    /**
+     * The main menu loop of the program.
+     */
+    private void runMenu() {
+        int option = mainMenu();
+
+        while (option != 0) {
+
+            // Call the appropriate method based on user choice
+            switch(option) {
+                case 1 -> addPost();
+                case 2 -> listAllPosts();
+                default -> System.out.println("You have entered an invalid option: " + option);
+            }
+        }
+    }
 }
