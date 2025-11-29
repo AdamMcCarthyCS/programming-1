@@ -74,4 +74,27 @@ public class MessagePost {
     public void setLikes(int likes) {
         this.likes = likes;
     }
+
+    /**
+     * Returns a message displaying a message, author and number of likes.
+     *
+     * @return          a formatted version of the message detials
+     */
+    public String display() {
+        String str = "";
+
+        str += (author + "\n");
+
+        if (likes > 0) {
+            str += (" - " + likes + " people like this.\n");
+        } else {
+            str += "0 likes.\n";
+        }
+
+        if (!message.isEmpty()) {
+            str += "\t" + message + "\n";
+        }
+
+        return str;
+    }
 }
