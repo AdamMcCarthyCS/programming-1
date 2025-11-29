@@ -33,16 +33,13 @@ public class Driver{
 
     //gather the product data from the user and create a new product object.
     private void addProduct(){
-    	System.out.print("Enter the Product Name:  ");
-        String productName = input.nextLine();
-        System.out.print("Enter the Product Code:  ");
-        int productCode = input.nextInt();
-        System.out.print("Enter the Unit Cost:  ");
-        double unitCost = input.nextDouble();
+    	// Read in product name
+        String productName = ScannerInput.readNextLine("Enter the Product Name:  ");
+        int productCode = ScannerInput.readNextInt("Enter the Product Code:  ");
+        double unitCost = ScannerInput.readNextDouble("Enter the Unit Cost:  ");
         //Ask the user to type in either a Y or an N.  This is then
         //converted to either a True or a False (i.e. a boolean value).
-    	System.out.print("Is this product in your current line (y/n): ");
-    	char currentProduct = input.next().charAt(0);
+    	char currentProduct = ScannerInput.readNextChar("Is this product in your current line (y/n): ");
     	boolean inCurrentProductLine = false;
     	if ((currentProduct == 'y') || (currentProduct == 'Y'))
     		inCurrentProductLine = true;
@@ -53,7 +50,6 @@ public class Driver{
         } else {
             System.out.println("No product added");
         }
-        input.nextLine();
     }
 
     public void processOrder() {
