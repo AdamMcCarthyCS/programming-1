@@ -6,7 +6,13 @@
  */
 public class Driver {
     private MessagePost post;
-    private NewsFeed newsfeed;
+    private NewsFeed newsfeed = new NewsFeed();
+
+    public Driver() {
+        processFeed();
+        runMenu();
+    }
+
     /**
      * The main method is the starting point for the program.
      *
@@ -75,13 +81,24 @@ public class Driver {
         int option = mainMenu();
 
         while (option != 0) {
-
+            System.out.println();
             // Call the appropriate method based on user choice
             switch(option) {
                 case 1 -> addPost();
                 case 2 -> listAllPosts();
                 default -> System.out.println("You have entered an invalid option: " + option);
             }
+
+            // Pause program to allow user to read instructions in terminal
+            ScannerInput.readNextLine("\nPress enter key to continue... ");
+            System.out.println();
+            // Display main menu again
+            option = mainMenu();
         }
+
+        // Add newline formatting for easier reading
+        System.out.println();
+        System.out.println("Exiting the program. Goodbye!");
+        System.exit(0);
     }
 }
