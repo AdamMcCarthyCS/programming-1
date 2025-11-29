@@ -18,4 +18,23 @@ public class NewsFeed {
     public NewsFeed(ArrayList<MessagePost> posts) {
         this.posts = posts;
     }
+
+    /**
+     * Stores a {@code MessagePost} instance.
+     *
+     * @param post
+     */
+    public void addPost(MessagePost post) {
+        posts.add(post);
+    }
+
+    public String show() {
+        // string to accumulate all posts for returning
+        String allPosts = "";
+        // Add each post in posts to the string to be returned
+        for (MessagePost post: posts) {
+            allPosts += post.display();
+        }
+        return allPosts;
+    }
 }
