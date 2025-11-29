@@ -31,7 +31,21 @@ public class Driver {
 
         // Add post to newsfeed
         newsfeed.addPost(post);
-        // Add newline for formatting display for easier reading
+        // Add newline formatting for easier reading
+        System.out.println();
+    }
+
+    /**
+     * Asks user for length of feed and reads in posts.
+     */
+    public void processFeed() {
+        // Read in number of messages that will be in the feed
+        int numberOfPosts = ScannerInput.readNextInt("Enter the number of messages to add to the " +
+                "feed: ");
+        for (int i = 0; i < numberOfPosts; i++) {
+            addPost();
+        }
+        // Add newline formatting for easier reading
         System.out.println();
     }
 }
