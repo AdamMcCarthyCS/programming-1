@@ -9,7 +9,6 @@ import java.util.Scanner;
  */
 public class Driver{
 
-    private Scanner input = new Scanner(System.in);
     private Store store;
 
     /**
@@ -112,8 +111,8 @@ public class Driver{
      * Ask user to enter a price then list all products more expensive than that price.
      */
     private void printProductsAbovePrice() {
-        System.out.print("Enter a price above which all products are printed: ");
-        double price = input.nextDouble();
+        double price = ScannerInput.readNextDouble("Enter a price above which all products are " +
+                "printed: ");
         System.out.println(store.listProductsAbovePrice(price));
     }
 
