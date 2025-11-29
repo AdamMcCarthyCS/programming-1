@@ -54,9 +54,9 @@ public class Driver{
 
     public void processOrder() {
         store = new Store();
-        System.out.print("How many products would you like to have in your store? ");
-        int numberOfProducts = input.nextInt();
-        input.nextLine();
+        // Read in store size from user for product entering loop
+        int numberOfProducts = ScannerInput.readNextInt("How many products would you like to " +
+                "have in your store? ");
         for (int i = 0; i < numberOfProducts; i++) {
             addProduct();
             System.out.println();
@@ -149,7 +149,7 @@ public class Driver{
 
             // Pause program to allow user to read instructions in terminal
             System.out.println();
-            ScannerInput.readNextLine("\nPress enter key to continue...");
+            ScannerInput.readNextLine("\nPress enter key to continue... ");
 
             // Display main menu again
             option = mainMenu();
