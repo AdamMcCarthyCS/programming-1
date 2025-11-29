@@ -118,7 +118,7 @@ public class Driver{
      * @return      the integer menu option the user selects
      */
     private int mainMenu() {
-        System.out.print("""
+        int option = ScannerInput.readNextInt("""
                 Shop Menu
                 ---------
                     1) List the Products
@@ -128,7 +128,6 @@ public class Driver{
                     5) List products that are more expensive than a given price
                     0) Exit
                  ==>>""" + " ");
-        int option = input.nextInt();
         return option;
     }
 
