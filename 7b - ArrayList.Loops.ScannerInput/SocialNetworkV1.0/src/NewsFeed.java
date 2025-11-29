@@ -15,8 +15,8 @@ public class NewsFeed {
     /**
      * Constructs a newsfeed object.
      */
-    public NewsFeed(ArrayList<MessagePost> posts) {
-        this.posts = posts;
+    public NewsFeed() {
+        this.posts = new ArrayList<>();
     }
 
     /**
