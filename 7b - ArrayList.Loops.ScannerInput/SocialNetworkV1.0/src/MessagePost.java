@@ -16,4 +16,62 @@ public class MessagePost {
         this.author = author;
         this.message = message;
     }
+
+    // GETTERS
+
+    /**
+     * Returns the author.
+     *
+     * @return      the name of the message author
+     */
+    public String getAuthor() {
+        return author;
+    }
+
+    /**
+     * Returns the message content.
+     *
+     * @return      the text content of the message
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * Returns the number of likes the message received.
+     *
+     * @return      the total number of likes received by the message
+     */
+    public int getLikes() {
+        return likes;
+    }
+
+    // SETTERS
+
+    /**
+     * Sets the name of the author.
+     *
+     * @param author    the authors full name
+     */
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    /**
+     * Sets the message content
+     *
+     * @param message   the text content of the message.
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    /**
+     * Sets the number of likes the message received.
+     *
+     * @param likes     the number of likes the message received
+     */
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
 }
