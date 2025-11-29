@@ -149,9 +149,8 @@ public class Driver{
             }
 
             // Pause program to allow user to read instructions in terminal
-            System.out.println("\nPress enter key to continue...");
-            input.nextLine();
-            input.nextLine(); // Second read due to bug in scanner
+            System.out.println();
+            ScannerInput.readNextLine("\nPress enter key to continue...");
 
             // Display main menu again
             option = mainMenu();
