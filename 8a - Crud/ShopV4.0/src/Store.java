@@ -138,4 +138,32 @@ public class Store {
         }
     }
 
+    /**
+     * A utility method to return products {@code ArrayList}.
+     *
+     * @return      an arraylist containing all store products
+     */
+    private ArrayList<Product> getProducts() {
+        return products;
+    }
+
+    /**
+     * A utility method to return the number of products in the store.
+     *
+     * @return      the number of products in the store
+     */
+    private int numberOfProducts() {
+        return products.size();
+    }
+
+    /**
+     * A utility method to ensure that an index is valid in the products {@code ArrayList}.
+     *
+     * @param index     an index value to be checked in the products {@code ArrayList}
+     * @return          whether the index value specified can be accessed or not
+     */
+    private boolean isValidIndex(int index) {
+        return (index >= 0) && (index < products.size());
+    }
+
 }
