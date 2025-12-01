@@ -30,7 +30,7 @@ public class Driver{
                   6) List products that are more expensive than a given price
                   ----------------------------
                   0) Exit
-               ==>>  """);
+               ==>>\s\s\s""");
         return option;
     }
 
