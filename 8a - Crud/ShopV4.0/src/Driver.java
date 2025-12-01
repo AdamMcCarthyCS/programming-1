@@ -23,11 +23,13 @@ public class Driver{
                ---------
                   1) Add a product
                   2) List the Products
+                  3) Update a Product
+                  4) Delete a Product
                   ----------------------------
-                  3) List the current products
-                  4) Display average product unit cost
-                  5) Display cheapest product
-                  6) List products that are more expensive than a given price
+                  5) List the current products
+                  6) Display average product unit cost
+                  7) Display cheapest product
+                  8) List products that are more expensive than a given price
                   ----------------------------
                   0) Exit
                ==>>\s\s\s""");
