@@ -127,4 +127,26 @@ public class Driver{
         System.out.println(store.listProductsAboveAPrice(price));
     }
 
+    /**
+     * Prompts user to enter the index of a product to delete and returns a message telling user
+     * whether product was successfully deleted or not
+     */
+    private void deleteProduct() {
+        // Only try to delete a product if the products ArrayList is not empty
+        if (store.numberOfProducts() > 0) {
+            // Prompt user for the index of the Product to delete
+            int indexToDelete = ScannerInput.readNextInt("Enter the index of the product to " +
+                    "delete ");
+            // Attempt deletion of product
+            Product productToDelete = store.deleteProduct(indexToDelete);
+            // If product exists, delete it and print message verification, otherwise print message
+            // showing no deletion happened
+            if (productToDelete != null) {
+                System.out.println("Delete successful! Deleted product: " + productToDelete.getProductName());
+            } else {
+                System.out.println("Delete NOT Successful");
+            }
+        }
+    }
+
 }
