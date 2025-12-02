@@ -143,7 +143,7 @@ public class Store {
      *
      * @return      an arraylist containing all store products
      */
-    private ArrayList<Product> getProducts() {
+    public ArrayList<Product> getProducts() {
         return products;
     }
 
@@ -152,7 +152,7 @@ public class Store {
      *
      * @return      the number of products in the store
      */
-    private int numberOfProducts() {
+    public int numberOfProducts() {
         return products.size();
     }
 
@@ -162,7 +162,7 @@ public class Store {
      * @param index     an index value to be checked in the products {@code ArrayList}
      * @return          whether the index value specified can be accessed or not
      */
-    private boolean isValidIndex(int index) {
+    public boolean isValidIndex(int index) {
         return (index >= 0) && (index < products.size());
     }
 
