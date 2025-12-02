@@ -166,4 +166,18 @@ public class Store {
         return (index >= 0) && (index < products.size());
     }
 
+    /**
+     * Deletes a product from the products {@code ArrayList} at a specified index. If the index
+     * is valid the Product at the index is returned, otherwise null is returned.
+     *
+     * @param indexToDelete     the index of the product to delete in the {@code ArrayList}
+     * @return                  the product at the index or null
+     */
+    public Product deleteProduct(int indexToDelete) {
+        if (isValidIndex(indexToDelete)) {
+            return products.remove(indexToDelete);
+        }
+        return null;
+    }
+
 }
