@@ -180,4 +180,17 @@ public class Store {
         return null;
     }
 
+    /**
+     * Returns a product at a valid index in the products or returns null.
+     *
+     * @param index     the index of the product
+     * @return          the product at index or null
+     */
+    public Product findProduct(int index) {
+        if (isValidIndex(index)) {
+            return products.get(index);
+        }
+        return null;
+    }
+
 }
