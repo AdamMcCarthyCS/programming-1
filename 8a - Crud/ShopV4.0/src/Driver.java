@@ -44,10 +44,11 @@ public class Driver{
             switch (option){
                 case 1 -> addProduct();
                 case 2 -> printProducts();
-                case 3 -> printCurrentProducts();
-                case 4 -> printAverageProductPrice();
-                case 5 -> printCheapestProduct();
-                case 6 -> printProductsAboveAPrice();
+                case 4 -> deleteProduct();
+                case 5 -> printCurrentProducts();
+                case 6 -> printAverageProductPrice();
+                case 7 -> printCheapestProduct();
+                case 8 -> printProductsAboveAPrice();
                 default -> System.out.println("Invalid option entered: " + option);
             }
 
