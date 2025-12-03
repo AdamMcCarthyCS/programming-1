@@ -28,6 +28,11 @@ public class NewsFeed {
         posts.add(post);
     }
 
+    /**
+     * Returns all posts in the newsfeed.
+     *
+     * @return      The posts contained in the newsfeed
+     */
     public String show() {
         // string to accumulate all posts for returning
         String allPosts = "";
