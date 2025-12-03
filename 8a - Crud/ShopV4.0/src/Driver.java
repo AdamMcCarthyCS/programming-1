@@ -156,26 +156,35 @@ public class Driver{
      */
     private void updateProduct() {
         printProducts();
-        int indexToUpdate = ScannerInput.readNextInt("Enter the index of the product to update " +
+        // Only ask user to choose product to update if products ArrayList is nonempty
+        if (store.numberOfProducts() > 0) {
+            int indexToUpdate = ScannerInput.readNextInt("Enter the index of the product to update " +
                 "==> ");
+            if (store.isValidIndex(indexToUpdate)) {
+                String productName = ScannerInput.readNextLine("Enter the Product Name: ");
+                int productCode = ScannerInput.readNextInt("Enter the product code: ");
+                double unitCost = ScannerInput.readNextDouble("Enter the Unit Cost: ");
 
-        String productName = ScannerInput.readNextLine("Enter the Product Name: ");
-        int productCode = ScannerInput.readNextInt("Enter the product code: ");
-        double unitCost = ScannerInput.readNextDouble("Enter the Unit Cost: ");
-
-        /*
-            Ask the user to type in either a Y or N. This is then converted to eithar a true or
-            false (i.e. a boolean value).
-         */
-        char currentProduct = ScannerInput.readNextChar("Is this product in your current product " +
-                "line (y/n): ");
-        boolean inCurrentProductLine = false;
-        if ((currentProduct == 'y') || (currentProduct == 'Y')) {
-            inCurrentProductLine = true;
+                /*
+                    Ask the user to type in either a Y or N. This is then converted to eithar a true or
+                    false (i.e. a boolean value).
+                 */
+                char currentProduct = ScannerInput.readNextChar("Is this product in your current product " +
+                    "line (y/n): ");
+                boolean inCurrentProductLine = false;
+                if ((currentProduct == 'y') || (currentProduct == 'Y')) {
+                    inCurrentProductLine = true;
+                }
+                // pass the index of the product and the new product details to Store
+                if (store.updateProduct(indexToUpdate, new Product(productName, productCode, unitCost,
+                    inCurrentProductLine))) {
+                    System.out.println("Update Successful");
+                } else {
+                    System.out.println("Update NOT Successful");
+                }
+            } else {
+                System.out.println("There are no products for this index number: " + indexToUpdate);
+            }
         }
-        // pass the index of the product and the new product details to Store
-        store.updateProduct(indexToUpdate, new Product(productName, productCode, unitCost,
-            inCurrentProductLine));
     }
-
 }
