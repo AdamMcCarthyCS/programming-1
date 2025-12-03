@@ -149,4 +149,32 @@ public class Driver{
         }
     }
 
+    /**
+     * Updates an existing product by reading new details from the user and calling the Store
+     * class method updateProduct.
+     */
+    private void updateProduct() {
+        printProducts();
+        int indexToUpdate = ScannerInput.readNextInt("Enter the index of the product to update " +
+                "==> ");
+
+        String productName = ScannerInput.readNextLine("Enter the Product Name: ");
+        int productCode = ScannerInput.readNextInt("Enter the product code: ");
+        double unitCost = ScannerInput.readNextDouble("Enter the Unit Cost: ");
+
+        /*
+            Ask the user to type in either a Y or N. This is then converted to eithar a true or
+            false (i.e. a boolean value).
+         */
+        char currentProduct = ScannerInput.readNextChar("Is this product in your current product " +
+                "line (y/n): ");
+        boolean inCurrentProductLine = false;
+        if ((currentProduct == 'y') || (currentProduct == 'Y')) {
+            inCurrentProductLine = true;
+        }
+        // pass the index of the product and the new product details to Store
+        store.updateProduct(indexToUpdate, new Product(productName, productCode, unitCost,
+            inCurrentProductLine));
+    }
+
 }
