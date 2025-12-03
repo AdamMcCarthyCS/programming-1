@@ -69,4 +69,17 @@ public class NewsFeed {
         }
         return false;
     }
+
+    /**
+     * Returns a {@code MessagePost} object if it exists at a given index.
+     *
+     * @param index     the index in the posts ArrayList where the post can be found
+     * @return          the {@code MessagePost} instance if it exists; otherwise null
+     */
+    public MessagePost findMessagePost(int index) {
+        if (isValidIndex(index)) {
+            return posts.get(index);
+        }
+        return null;
+    }
 }
