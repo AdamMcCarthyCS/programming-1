@@ -37,8 +37,8 @@ public class NewsFeed {
         // string to accumulate all posts for returning
         String allPosts = "";
         // Add each post in posts to the string to be returned
-        for (MessagePost post: posts) {
-            allPosts += post.display();
+        for (int i = 0; i < posts.size(); i++) {
+            allPosts += (i + 1) + ": " + posts.get(i).display();
         }
         // if there are no posts return a string informing the user
 
