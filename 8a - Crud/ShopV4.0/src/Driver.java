@@ -44,6 +44,7 @@ public class Driver{
             switch (option){
                 case 1 -> addProduct();
                 case 2 -> printProducts();
+                case 3 -> updateProduct();
                 case 4 -> deleteProduct();
                 case 5 -> printCurrentProducts();
                 case 6 -> printAverageProductPrice();
