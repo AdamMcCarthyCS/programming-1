@@ -35,6 +35,11 @@ public class NewsFeed {
         for (MessagePost post: posts) {
             allPosts += post.display();
         }
+        // if there are no posts return a string informing the user
+
+        if (allPosts.isEmpty()) {
+            allPosts = "There are no posts";
+        }
         return allPosts;
     }
 }
