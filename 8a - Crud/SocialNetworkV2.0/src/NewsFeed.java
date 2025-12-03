@@ -1,30 +1,40 @@
 import java.util.ArrayList;
 
+/**
+ * This class stores and returns posts to the user for printing.
+ *
+ * @author Adam McCarthy
+ * @version 1.0
+ */
 public class NewsFeed {
-
+    /**
+     * A collection of all posts in the newsfeed.
+     */
     private ArrayList<MessagePost> posts;
 
+    /**
+     * Constructs a newsfeed object.
+     */
     public NewsFeed() {
-        posts = new ArrayList<MessagePost>();
+        this.posts = new ArrayList<>();
     }
 
-    public boolean addPost(MessagePost post) {
-        return posts.add(post);
+    /**
+     * Stores a {@code MessagePost} instance.
+     *
+     * @param post
+     */
+    public void addPost(MessagePost post) {
+        posts.add(post);
     }
 
     public String show() {
-        String str = "";
-
-        for(MessagePost post : posts) {
-            str += post.display() + "\n";
+        // string to accumulate all posts for returning
+        String allPosts = "";
+        // Add each post in posts to the string to be returned
+        for (MessagePost post: posts) {
+            allPosts += post.display();
         }
-
-        if (str.isEmpty()){
-            return "No Posts";
-        }
-        else {
-            return str;
-        }
+        return allPosts;
     }
-
 }
