@@ -47,4 +47,13 @@ public class NewsFeed {
         }
         return allPosts;
     }
+
+    /**
+     * Returns the number of posts in the posts ArrayList.
+     *
+     * @return      the current number of posts in the newsfeed
+     */
+    public int numberOfPosts() {
+        return posts.size();
+    }
 }
