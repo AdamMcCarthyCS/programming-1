@@ -22,6 +22,13 @@ public class Driver {
     }
 
     /**
+     * Prints all stored posts.
+     */
+    private void listAllPosts() {
+        System.out.println(newsfeed.show());
+    }
+
+    /**
      * Reads user input to create a post and stores in newsfeed.
      */
     private void addPost() {
@@ -40,6 +47,39 @@ public class Driver {
         System.out.println();
     }
 
+    /**
+     * Updates an existing post using user input.
+     *
+     * This method reads in new values for the author and content of the post if it exists at the
+     * given value. It returns a message informing the user if the update has taken place.
+     */
+    private void updatePost() {
+        listAllPosts();
+        if (newsfeed.numberOfPosts() > 0) {
+            // Only ask user to update the post if it exists
+            int indexToUpdate = ScannerInput.readNextInt("Enter the index of the post to update ==> ");
+            if (newsfeed.isValidIndex(indexToUpdate)) {
+                String author = ScannerInput.readNextLine("Enter the message author: ");
+                String message = ScannerInput.readNextLine("Enter the message: ");
+
+                // Pass the index of the post and the new post details to NewsFeed for updating
+                // and check for success.
+                if (newsfeed.updatePost(indexToUpdate, new MessagePost(author, message))) {
+                    System.out.println("Update Successful");
+                } else {
+                    System.out.println("Update NOT Successful");
+                }
+            } else {
+                System.out.println("There are no products for this index number");
+            }
+        }
+    }
+
+    /**
+     * This method prints the main menu to the UI.
+     *
+     * @return      a string representation of the menu options
+     */
     private int mainMenu() {
         int option = ScannerInput.readNextInt("""
                 Social Network Menu
@@ -54,13 +94,6 @@ public class Driver {
     }
 
     /**
-     * Prints all stored posts.
-     */
-    private void listAllPosts() {
-        System.out.println(newsfeed.show());
-    }
-
-    /**
      * The main menu loop of the program.
      */
     private void runMenu() {
@@ -72,6 +105,7 @@ public class Driver {
             switch(option) {
                 case 1 -> addPost();
                 case 2 -> listAllPosts();
+                case 3 -> updatePost();
                 default -> System.out.println("You have entered an invalid option: " + option);
             }
 
@@ -87,4 +121,6 @@ public class Driver {
         System.out.println("Exiting the program. Goodbye!");
         System.exit(0);
     }
+
+
 }
