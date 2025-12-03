@@ -56,4 +56,17 @@ public class NewsFeed {
     public int numberOfPosts() {
         return posts.size();
     }
+
+    /**
+     * Returns whether the index is valid for the posts ArrayList.
+     *
+     * @param index     an index to be checked against valid ArrayList index values
+     * @return          if the index is valid true; otherwise, false
+     */
+    public boolean isValidIndex(int index) {
+        if (index >= 0 && index < posts.size()) {
+            return true;
+        }
+        return false;
+    }
 }
