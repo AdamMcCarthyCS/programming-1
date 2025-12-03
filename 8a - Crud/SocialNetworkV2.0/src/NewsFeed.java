@@ -82,4 +82,32 @@ public class NewsFeed {
         }
         return null;
     }
+
+    /**
+     * Updates a post at a particular index by replacing its fields with the identical fields of
+     * another post object passed to the argument
+     *
+     * @param indexToUpdate     the index of the post to update in the newsfeed posts list
+     * @param updateDetails     a MessagePost object whose fields are used to update a retrieved
+     *                          post
+     * @return                  true if the update takes place; false otherwise
+     */
+    public boolean updatePost(int indexToUpdate, MessagePost updateDetails) {
+        // find the MessagePost object by its index
+        MessagePost foundPost = findMessagePost(indexToUpdate);
+
+        /*
+            If the MessagePost exists, use the details passed in the updateDetails parameter to
+            update the product found at that index in the posts ArrayList
+        */
+        if (foundPost != null) {
+            foundPost.setAuthor(updateDetails.getAuthor());
+            foundPost.setMessage(updateDetails.getMessage());
+            foundPost.setLikes(updateDetails.getLikes());
+            return true;
+        }
+
+        // if the post was not found, return false, indicating that no update took place
+        return false;
+    }
 }
