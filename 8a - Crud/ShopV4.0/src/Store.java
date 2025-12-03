@@ -193,4 +193,34 @@ public class Store {
         return null;
     }
 
+    /**
+     * Updates the product based on the field values of another product that was passed as an
+     * argument. The method returns true if the product was successfully  updated and false
+     * otherwise.
+     *
+     * @param indexToUpdate     the index in the products array to check for the Product object
+     * @param updateDetails     the Product object whose fields will be used to update the chosen
+     *                         products object
+     * @return                  true if the product is updated, false otherwise
+     */
+    public boolean updateProduct(int indexToUpdate, Product updateDetails) {
+        // Find the product object using its index
+        Product foundProduct = findProduct(indexToUpdate);
+
+        /* If the product exists, use the fields of the Product object passed as an argument to
+         * the updateDetails parameter
+         * Update the found product in the ArrayList
+         */
+        if (foundProduct != null) {
+            foundProduct.setProductName(updateDetails.getProductName());
+            foundProduct.setProductCode(updateDetails.getProductCode());
+            foundProduct.setUnitCost(updateDetails.getUnitCost());
+            foundProduct.setInCurrentProductLine(updateDetails.isInCurrentProductLine());
+            return true;
+        }
+
+        // if the product was not found, return false, indicating that the update was unsuccessful
+        return false;
+    }
+
 }
