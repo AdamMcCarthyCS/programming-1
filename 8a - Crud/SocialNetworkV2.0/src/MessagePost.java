@@ -88,7 +88,7 @@ public class MessagePost {
         if (likes > 0) {
             str += (" - " + likes + " people like this.\n");
         } else {
-            str += "0 likes.\n";
+            str += " - " + "0 likes.\n";
         }
 
         if (!message.isEmpty()) {
