@@ -38,7 +38,7 @@ public class NewsFeed {
         String allPosts = "";
         // Add each post in posts to the string to be returned
         for (int i = 0; i < posts.size(); i++) {
-            allPosts += (i + 1) + ": " + posts.get(i).display();
+            allPosts += i + ": " + posts.get(i).display();
         }
         // if there are no posts return a string informing the user
 
