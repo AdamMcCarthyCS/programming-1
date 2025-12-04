@@ -22,6 +22,55 @@ public class Driver {
     }
 
     /**
+     * This method prints the main menu to the UI.
+     *
+     * @return      a string representation of the menu options
+     */
+    private int mainMenu() {
+        int option = ScannerInput.readNextInt("""
+                Social Network Menu
+                    ---------------------
+                    1) Add a Message Post
+                    2) List all Posts
+                    3) Update a Post
+                    4) Delete a Post
+                    ---------------------
+                    0) Exit
+                 ==>>\s\s""");
+        return option;
+    }
+
+    /**
+     * The main menu loop of the program.
+     */
+    private void runMenu() {
+        int option = mainMenu();
+
+        while (option != 0) {
+            System.out.println();
+            // Call the appropriate method based on user choice
+            switch(option) {
+                case 1 -> addPost();
+                case 2 -> listAllPosts();
+                case 3 -> updatePost();
+                case 4 -> deletePost();
+                default -> System.out.println("You have entered an invalid option: " + option);
+            }
+
+            // Pause program to allow user to read instructions in terminal
+            ScannerInput.readNextLine("\nPress enter key to continue... ");
+            System.out.println();
+            // Display main menu again
+            option = mainMenu();
+        }
+
+        // Add newline formatting for easier reading
+        System.out.println();
+        System.out.println("Exiting the program. Goodbye!");
+        System.exit(0);
+    }
+
+    /**
      * Prints all stored posts.
      */
     private void listAllPosts() {
@@ -76,52 +125,22 @@ public class Driver {
     }
 
     /**
-     * This method prints the main menu to the UI.
-     *
-     * @return      a string representation of the menu options
+     * Deletes a post by user specified index if it exists.
      */
-    private int mainMenu() {
-        int option = ScannerInput.readNextInt("""
-                Social Network Menu
-                    ---------------------
-                    1) Add a Message Post
-                    2) List all Posts
-                    3) Update a Post
-                    4) Delete a Post
-                    ---------------------
-                    0) Exit
-                 ==>>\s\s""");
-        return option;
-    }
-
-    /**
-     * The main menu loop of the program.
-     */
-    private void runMenu() {
-        int option = mainMenu();
-
-        while (option != 0) {
-            System.out.println();
-            // Call the appropriate method based on user choice
-            switch(option) {
-                case 1 -> addPost();
-                case 2 -> listAllPosts();
-                case 3 -> updatePost();
-                default -> System.out.println("You have entered an invalid option: " + option);
+    public void deletePost() {
+        listAllPosts();
+        // Only prompt the user for the index of the post to delete if the NewsFeed isn't empty
+        if (newsfeed.numberOfPosts() > 0) {
+            int indexToDelete = ScannerInput.readNextInt("Enter the index of the post to delete: ");
+            // Pass the index of the product to delete to the store and check for success
+            MessagePost postToDelete = newsfeed.deletePost(indexToDelete);
+            if (postToDelete != null) {
+                System.out.println("Delete Successful! Deleted post: " + postToDelete.getAuthor() +
+                    " - " + postToDelete.getMessage());
+            } else {
+                System.out.println("Delete NOT Successful");
             }
-
-            // Pause program to allow user to read instructions in terminal
-            ScannerInput.readNextLine("\nPress enter key to continue... ");
-            System.out.println();
-            // Display main menu again
-            option = mainMenu();
         }
-
-        // Add newline formatting for easier reading
-        System.out.println();
-        System.out.println("Exiting the program. Goodbye!");
-        System.exit(0);
     }
-
 
 }
