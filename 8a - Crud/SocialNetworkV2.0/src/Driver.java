@@ -87,6 +87,7 @@ public class Driver {
                     1) Add a Message Post
                     2) List all Posts
                     3) Update a Post
+                    4) Delete a Post
                     ---------------------
                     0) Exit
                  ==>>\s\s""");
