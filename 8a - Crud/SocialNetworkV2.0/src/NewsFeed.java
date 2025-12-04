@@ -110,4 +110,17 @@ public class NewsFeed {
         // if the post was not found, return false, indicating that no update took place
         return false;
     }
+
+    /**
+     * Deletes a post from the news feed given a valid index is provided.
+     *
+     * @param indexToDelete     the index of the posts ArrayList where the post to be deleted exists
+     * @return                  the deleted post if it exists; otherwise null
+     */
+    public MessagePost deletePost(int indexToDelete) {
+        if (isValidIndex(indexToDelete)) {
+            return posts.remove(indexToDelete);
+        }
+        return null;
+    }
 }
