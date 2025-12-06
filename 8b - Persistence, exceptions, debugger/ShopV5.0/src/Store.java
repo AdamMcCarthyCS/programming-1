@@ -239,4 +239,11 @@ public class Store {
         products = (ArrayList<Product>) is.readObject();
         is.close();
     }
+
+    public void save() throws Exception {
+        XStream xstream = new XStream(new DomDriver());
+        ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("products.xml"));
+        out.writeObject(products);
+        out.close();
+    }
 }
