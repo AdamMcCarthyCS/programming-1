@@ -1,3 +1,11 @@
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 import java.util.ArrayList;
 
 /**
@@ -216,4 +224,19 @@ public class Store {
         }
     }
 
+    @SuppressWarnings("unchecked")
+    public void load() throws Exception {
+        // List of all the classes you want to include in the serialisation separated by a comma
+        Class<?>[] classes = new Class[] { Product.class };
+
+        // Set up the xstream object with default security and the above classes
+        XStream xstream = new XStream(new DomDriver());
+        XStream.setupDefaultSecurity(xstream);
+        xstream.allowTypes(classes);
+
+        // Doing the actual serialisation to an XML file
+        ObjectInputStream is = xstream.createObjectInputStream(new FileReader("products.xml"));
+        products = (ArrayList<Product>) is.readObject();
+        is.close();
+    }
 }
