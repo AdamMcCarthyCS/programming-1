@@ -52,6 +52,8 @@ public class Driver{
                 case 6 -> printAverageProductPrice();
                 case 7 -> printCheapestProduct();
                 case 8 -> printProductsAboveAPrice();
+                case 9 -> saveProducts();
+                case 10 -> loadProducts();
                 default -> System.out.println("Invalid option entered: " + option);
             }
 
@@ -179,6 +181,32 @@ public class Driver{
     private void printProductsAboveAPrice(){
         double price = ScannerInput.readNextDouble("View the products costing more than this price:  ");
         System.out.println(store.listProductsAboveAPrice(price));
+    }
+
+    /**
+     * Loads product objects from file.
+     * <p>This method loads the products from an xml file returning an error message if the
+     * operation was unsuccessful.</p>
+     */
+    private void saveProducts() {
+        try {
+            store.save();
+        } catch (Exception e) {
+            System.err.println("Error writing to file: " + e);
+        }
+    }
+
+    /**
+     * Saves product objects to file.
+     * <p>This method loads the products from an xml file returning an error message if the
+     * operation was unsuccessful.</p>
+     */
+    private void loadProducts() {
+        try {
+            store.save();
+        } catch (Exception e) {
+            System.err.println("Error reading from file: " + e);
+        }
     }
 
 }
