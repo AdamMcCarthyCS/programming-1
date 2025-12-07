@@ -21,18 +21,20 @@ public class Driver{
         int option = ScannerInput.readNextInt("""
                Shop Menu
                ---------
-                  1) Add a product
-                  2) List the Products
-                  3) Update a Product
-                  4) Delete a Product
+                  1)  Add a product
+                  2)  List the Products
+                  3)  Update a Product
+                  4)  Delete a Product
                   ----------------------------
-                  5) List the current products
-                  6) Display average product unit cost
-                  7) Display cheapest product
-                  8) List products that are more expensive than a given price
+                  5)  List the current products
+                  6)  Display average product unit cost
+                  7)  Display cheapest product
+                  8)  List products that are more expensive than a given price
                   ----------------------------
-                  0) Exit
-               ==>>  """);
+                  9)  Save products to products.xml
+                  10) Load products from products.xml
+                  0)  Exit
+               ==>>\s\s""");
         return option;
     }
 
