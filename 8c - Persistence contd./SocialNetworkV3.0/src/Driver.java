@@ -56,6 +56,8 @@ public class Driver {
                 case 2 -> listAllPosts();
                 case 3 -> updatePost();
                 case 4 -> deletePost();
+                case 5 -> savePosts();
+                case 6 -> loadPosts();
                 default -> System.out.println("You have entered an invalid option: " + option);
             }
 
