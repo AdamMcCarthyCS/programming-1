@@ -2,7 +2,9 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 /**
@@ -151,8 +153,26 @@ public class NewsFeed {
         // Serialise objects to an XML file
         ObjectInputStream is = xstream.createObjectInputStream(new FileReader("posts.xml"));
 
+        // Create an ArrayList of the loaded posts
         ArrayList<MessagePost> loadedPosts = (ArrayList<MessagePost>) is.readObject();
+        // Append the loaded posts to the current list of posts rather than overwriting them
         posts.addAll(loadedPosts);
         is.close();
+    }
+
+    /**
+     * Saves the programs MessagePost objects to an XML file.
+     *
+     * <p>The method saves all the message post objects to an XML file in the root directory of
+     * the project. The existing MessagePost objects in that XML file are overwritten.</p>
+     *
+     * @throws Exception    an exception which is thrown if the MessagePost instances are not
+     * saved successfully
+     */
+    public void save() throws Exception {
+        XStream xstream = new XStream(new DomDriver());
+        ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("posts.xml"));
+        out.writeObject(posts);
+        out.close();
     }
 }
