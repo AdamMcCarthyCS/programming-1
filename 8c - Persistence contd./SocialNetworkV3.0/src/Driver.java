@@ -145,4 +145,26 @@ public class Driver {
         }
     }
 
+    /**
+     * Saves all current MessagePost objects to XML file.
+     */
+    public void savePosts() {
+        try {
+            newsfeed.save();
+        } catch (Exception e) {
+            System.err.println("Error writing to the file: " + e);
+        }
+    }
+
+    /**
+     * Loads all messages from file and appends them to the posts ArrayList as MessagePost objects
+     */
+    public void loadPosts() {
+        try {
+            newsfeed.load();
+        } catch (Exception e) {
+            System.err.println("Error loading from the file: " + e);
+        }
+    }
+
 }
