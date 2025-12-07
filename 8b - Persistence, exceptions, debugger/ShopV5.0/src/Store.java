@@ -189,7 +189,7 @@ public class Store {
             for (Product product : products) {
                 totalPrice += product.getUnitCost();
             }
-            return totalPrice / products.size();
+            return Utilities.toTwoDecimalPlaces(totalPrice / products.size());
         } else {
             return -1;
         }
