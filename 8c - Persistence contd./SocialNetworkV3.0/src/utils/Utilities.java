@@ -22,4 +22,16 @@ public class Utilities {
             return stringToTruncate.substring(0, length);
         }
     }
+
+    /**
+     * Checks if a string is less than or equal to a maximum length.
+     *
+     * @param strToCheck        a string whose length will be checked
+     * @param maxLength         the maximum allowed length of the string
+     * @return                  true if the string is less than or equal to the required length;
+     * false otherwise
+     */
+    public static boolean validateStringLength(String strToCheck, int maxLength) {
+        return strToCheck.length() <= maxLength;
+    }
 }
