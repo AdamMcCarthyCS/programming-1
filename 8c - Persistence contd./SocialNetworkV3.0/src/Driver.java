@@ -35,6 +35,8 @@ public class Driver {
                     3) Update a Post
                     4) Delete a Post
                     ---------------------
+                    5) Save posts
+                    6) Load posts
                     0) Exit
                  ==>>\s\s""");
         return option;
