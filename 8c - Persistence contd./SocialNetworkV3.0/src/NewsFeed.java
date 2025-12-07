@@ -1,3 +1,8 @@
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+import java.io.FileReader;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 /**
@@ -122,5 +127,32 @@ public class NewsFeed {
             return posts.remove(indexToDelete);
         }
         return null;
+    }
+
+    /**
+     * Loads MessagePost instances which are saved to an XML file into the program.
+     *
+     * <p>This method loads saved posts from the project root into the program. If the posts are
+     * not loaded correctly it throws and Exception. The posts that are loaded are appended to
+     * the previously existing posts rather than overwriting them.</p>
+     *
+     * @throws Exception    an exception which is thrown if posts are not successfully loaded
+     */
+    @SuppressWarnings("unchecked")
+    public void load() throws Exception {
+        // List classes that you wish to include in the Serialisation, separated by a comma
+        Class<?>[] classes = new Class[] { MessagePost.class };
+
+        // Set up the XStream object with default security and the above class
+        XStream xstream = new XStream(new DomDriver());
+        XStream.setupDefaultSecurity(xstream);
+        xstream.allowTypes(classes);
+
+        // Serialise objects to an XML file
+        ObjectInputStream is = xstream.createObjectInputStream(new FileReader("posts.xml"));
+
+        ArrayList<MessagePost> loadedPosts = (ArrayList<MessagePost>) is.readObject();
+        posts.addAll(loadedPosts);
+        is.close();
     }
 }
