@@ -1,0 +1,16 @@
+<object-stream>
+  <list>
+    <Product>
+      <productName>Reebok Classics</productName>
+      <productCode>2323</productCode>
+      <unitCost>54.99</unitCost>
+      <inCurrentProductLine>true</inCurrentProductLine>
+    </Product>
+    <Product>
+      <productName>Addidas Samba</productName>
+      <productCode>3434</productCode>
+      <unitCost>84.99</unitCost>
+      <inCurrentProductLine>true</inCurrentProductLine>
+    </Product>
+  </list>
+</object-stream>

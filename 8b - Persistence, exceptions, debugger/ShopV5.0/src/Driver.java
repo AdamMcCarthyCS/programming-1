@@ -197,13 +197,13 @@ public class Driver{
     }
 
     /**
-     * Saves product objects to file.
+     * Loads product objects to file.
      * <p>This method loads the products from an xml file returning an error message if the
      * operation was unsuccessful.</p>
      */
     private void loadProducts() {
         try {
-            store.save();
+            store.load();
         } catch (Exception e) {
             System.err.println("Error reading from file: " + e);
         }
