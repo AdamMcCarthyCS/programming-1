@@ -131,10 +131,7 @@ public class Driver{
                 //Ask the user to type in either a Y or an N.  This is then
                 //converted to either a True or a False (i.e. a boolean value).
                 char currentProduct = ScannerInput.readNextChar("Is this product in your current line (y/n): ");
-                boolean inCurrentProductLine = false;
-                if ((currentProduct == 'y') || (currentProduct == 'Y'))
-                    inCurrentProductLine = true;
-
+                boolean inCurrentProductLine = Utilities.YNtoBoolean(currentProduct);
                 //pass the index of the product and the new product details to Store for updating and check for success.
                 if (store.updateProduct(indexToUpdate, new Product(productName, productCode, unitCost, inCurrentProductLine))){
                     System.out.println("Update Successful");
