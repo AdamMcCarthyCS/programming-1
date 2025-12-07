@@ -1,19 +1,14 @@
 <object-stream>
   <list>
-    <MessagePost>
-      <author>Leo</author>
-      <message>message3</message>
-      <likes>3</likes>
-    </MessagePost>
-    <MessagePost>
-      <author>Adam</author>
-      <message>message1</message>
-      <likes>3</likes>
-    </MessagePost>
-    <MessagePost>
-      <author>Ali</author>
-      <message>message2</message>
+    <models.MessagePost>
+      <author>Jack</author>
+      <message>Hi there</message>
       <likes>2</likes>
-    </MessagePost>
+    </models.MessagePost>
+    <models.MessagePost>
+      <author>Jill</author>
+      <message>Hello!</message>
+      <likes>15</likes>
+    </models.MessagePost>
   </list>
 </object-stream>

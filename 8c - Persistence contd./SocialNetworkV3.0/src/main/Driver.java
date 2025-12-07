@@ -1,3 +1,9 @@
+package main;
+
+import models.MessagePost;
+import controllers.NewsFeed;
+import utils.ScannerInput;
+
 /**
  * This class runs the application and handles user input/output.
  *
