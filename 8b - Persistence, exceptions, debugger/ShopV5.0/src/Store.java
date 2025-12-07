@@ -224,6 +224,11 @@ public class Store {
         }
     }
 
+    /**
+     * Loads products from a file in the root directory
+     *
+     * @throws Exception    exception thrown if the file was not successfully loaded
+     */
     @SuppressWarnings("unchecked")
     public void load() throws Exception {
         // List of all the classes you want to include in the serialisation separated by a comma
@@ -240,6 +245,11 @@ public class Store {
         is.close();
     }
 
+    /**
+     * Save products to a file in the root directory
+     *
+     * @throws Exception    exception thrown if the file was not successfully saved
+     */
     public void save() throws Exception {
         XStream xstream = new XStream(new DomDriver());
         ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("products.xml"));
