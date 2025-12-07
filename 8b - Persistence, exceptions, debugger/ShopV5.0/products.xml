@@ -1,16 +1,16 @@
 <object-stream>
   <list>
-    <Product>
-      <productName>Reebok Classics</productName>
-      <productCode>2323</productCode>
-      <unitCost>54.99</unitCost>
+    <models.Product>
+      <productName>New Balance Cosmipolitans</productName>
+      <productCode>5000</productCode>
+      <unitCost>59.99</unitCost>
       <inCurrentProductLine>true</inCurrentProductLine>
-    </Product>
-    <Product>
-      <productName>Addidas Samba</productName>
-      <productCode>3434</productCode>
-      <unitCost>84.99</unitCost>
-      <inCurrentProductLine>true</inCurrentProductLine>
-    </Product>
+    </models.Product>
+    <models.Product>
+      <productName>Nike Air Max</productName>
+      <productCode>4000</productCode>
+      <unitCost>79.99</unitCost>
+      <inCurrentProductLine>false</inCurrentProductLine>
+    </models.Product>
   </list>
 </object-stream>

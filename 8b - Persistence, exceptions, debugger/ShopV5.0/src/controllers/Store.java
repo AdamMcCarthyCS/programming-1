@@ -1,12 +1,16 @@
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
+package controllers;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-
 import java.util.ArrayList;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import models.Product;
+import utils.Utilities;
+
 
 /**
  * The store class saves all the entered products into a primitive ArrayList.
@@ -51,7 +55,7 @@ public class Store {
     /**
      * Add the product object, passed as a parameter, to the ArrayList.
      *
-     * @param product Product object to be added to the ArrayList.
+     * @param product models.Product object to be added to the ArrayList.
      */
     public boolean add (Product product){
         return products.add (product);
@@ -62,7 +66,7 @@ public class Store {
      * Find a product object at a specific index location.
      * If the index location is not valid, return null.
      *
-     * @param index Index of the Product object in the ArrayList
+     * @param index Index of the models.Product object in the ArrayList
      * @return The product object or null if no object is at the index location
      */
     public Product findProduct(int index) {
@@ -93,9 +97,9 @@ public class Store {
 
 
     /**
-     * Delete a Product from the ArrayList, if it exists, at the index passed as a parameter.
+     * Delete a models.Product from the ArrayList, if it exists, at the index passed as a parameter.
      *
-     * @param indexToDelete Index of the Product object in the ArrayList
+     * @param indexToDelete Index of the models.Product object in the ArrayList
      * @return The deleted product object or null if no object is at the index location
      */
     public Product deleteProduct(int indexToDelete) {
@@ -106,10 +110,10 @@ public class Store {
     }
 
     /**
-     * Update a Product in the ArrayList with the contents passed in the Product object parameter.
+     * Update a models.Product in the ArrayList with the contents passed in the models.Product object parameter.
      *
-     * @param indexToUpdate Index of the Product object in the ArrayList
-     * @param updateDetails A Product object containing the updated details
+     * @param indexToUpdate Index of the models.Product object in the ArrayList
+     * @param updateDetails A models.Product object containing the updated details
      * @return The status of the update, True or False
      */
     public boolean updateProduct(int indexToUpdate, Product updateDetails) {
@@ -134,7 +138,7 @@ public class Store {
      * This method returns the cheapest product in the ArrayList.
      * If no products are stored in the ArrayList, null is returned.
      *
-     * @return The cheapest Product in the ArrayList or null, if no products are added yet.
+     * @return The cheapest models.Product in the ArrayList or null, if no products are added yet.
      */
     public Product cheapestProduct() {
         if (!products.isEmpty()) {
