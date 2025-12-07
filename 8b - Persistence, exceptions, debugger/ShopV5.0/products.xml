@@ -1,0 +1,16 @@
+<object-stream>
+  <list>
+    <models.Product>
+      <productName>New Balance Cosmipolitans</productName>
+      <productCode>5000</productCode>
+      <unitCost>59.99</unitCost>
+      <inCurrentProductLine>true</inCurrentProductLine>
+    </models.Product>
+    <models.Product>
+      <productName>Nike Air Max</productName>
+      <productCode>4000</productCode>
+      <unitCost>79.99</unitCost>
+      <inCurrentProductLine>false</inCurrentProductLine>
+    </models.Product>
+  </list>
+</object-stream>
