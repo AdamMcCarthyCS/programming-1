@@ -99,11 +99,11 @@ public class NewsFeed {
      * another post object passed to the argument
      *
      * @param indexToUpdate     the index of the post to update in the newsfeed posts list
-     * @param updateDetails     a MessagePost object whose fields are used to update a retrieved
-     *                          post
+     * @param author            the author of the MessagePost object
+     * @param message           the content of the MessagePost object
      * @return                  true if the update takes place; false otherwise
      */
-    public boolean updatePost(int indexToUpdate, MessagePost updateDetails) {
+    public boolean updatePost(int indexToUpdate, String author, String message) {
         // find the MessagePost object by its index
         MessagePost foundPost = findMessagePost(indexToUpdate);
 
@@ -112,9 +112,8 @@ public class NewsFeed {
             update the product found at that index in the posts ArrayList
         */
         if (foundPost != null) {
-            foundPost.setAuthor(updateDetails.getAuthor());
-            foundPost.setMessage(updateDetails.getMessage());
-            foundPost.setLikes(updateDetails.getLikes());
+            foundPost.setAuthor(author);
+            foundPost.setMessage(message);
             return true;
         }
 
