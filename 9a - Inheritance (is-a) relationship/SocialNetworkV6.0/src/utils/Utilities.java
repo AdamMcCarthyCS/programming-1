@@ -32,4 +32,19 @@ public class Utilities {
         return strToCheck.length() <= maxLength;
     }
 
+    /**
+     * Checks if an integer is in the inclusive integer interval [minimum, maximum]
+     *
+     * @param intToCheck    an integer to check
+     * @param minimum       the minimum valid value of the integer
+     * @param maximum       the maximum valid value of the integer
+     * @return              true if the checked integer lies inside the interval; false otherwise
+     */
+    public static boolean isWithinInclusiveRange(int intToCheck, int minimum, int maximum) {
+        if (intToCheck >= minimum && intToCheck <= maximum) {
+            return true;
+        }
+        return false;
+    }
+
 }

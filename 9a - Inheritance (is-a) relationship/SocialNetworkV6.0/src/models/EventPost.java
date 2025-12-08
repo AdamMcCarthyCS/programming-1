@@ -1,5 +1,7 @@
 package models;
 
+import utils.Utilities;
+
 /**
  * A class representing an event with a name and a cost.
  *
@@ -13,7 +15,7 @@ public class EventPost extends Post{
 
     public EventPost(String author, String eventName, double eventCost) {
         super(author);
-        this.eventName = eventName;
+        this.eventName = Utilities.truncateString(eventName, 35);
         this.eventCost = eventCost;
     }
 
@@ -40,7 +42,9 @@ public class EventPost extends Post{
      * @param eventName
      */
     public void setEventName(String eventName) {
-        this.eventName = eventName;
+        if (Utilities.validateStringLength(eventName, 35)) {
+            this.eventName = eventName;
+        }
     }
 
     /**
