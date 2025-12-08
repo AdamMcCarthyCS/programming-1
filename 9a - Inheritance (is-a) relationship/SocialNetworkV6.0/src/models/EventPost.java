@@ -58,4 +58,20 @@ public class EventPost extends Post{
             this.eventCost = eventCost;
         }
     }
+
+    @Override
+    public String display() {
+        String str = super.display();
+
+        if (!eventName.isEmpty()){
+            str += "\t" + eventName + "\n";
+        }
+
+        if (!eventName.isEmpty()){
+            str += "\t" + eventCost + "\n";
+        }
+
+        return str;
+
+    }
 }
