@@ -2,9 +2,11 @@ package controllers;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+
+import models.Post;
 import models.MessagePost;
 import models.PhotoPost;
-import models.Post;
+import models.EventPost;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -56,6 +58,7 @@ public class NewsFeed {
         }
     }
 
+
     public String showMessagePosts() {
         String str = "";
 
@@ -71,6 +74,28 @@ public class NewsFeed {
         else {
             return str;
         }
+    }
+
+    /**
+     * Returns a string containing the string representations of all EventPost objects in the
+     * posts ArrayList.
+     *
+     * @return          A string containing all EventPost Objects in the newsfeed
+     */
+    public String showEventPosts() {
+        String str = "";
+
+        for (Post post: posts) {
+            if (post instanceof EventPost) {
+                str += posts.indexOf(post) + ": " + post.display() + "\n";
+            }
+        }
+
+        if (str.isEmpty()) {
+            return "No Event Posts";
+        }
+
+        return str;
     }
 
     public Post deletePost(int indexToDelete) {
