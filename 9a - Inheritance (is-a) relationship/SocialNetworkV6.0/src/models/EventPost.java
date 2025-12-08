@@ -16,7 +16,7 @@ public class EventPost extends Post{
     public EventPost(String author, String eventName, double eventCost) {
         super(author);
         this.eventName = Utilities.truncateString(eventName, 35);
-        this.eventCost = eventCost;
+        setEventCost(eventCost);
     }
 
     /**
@@ -49,9 +49,13 @@ public class EventPost extends Post{
 
     /**
      * Sets the cost of the event.
-     * @param eventCost
+     *
+     * <p>The cost of the event is set if it is in the closed interval [0, 9999]</p>
+     * @param eventCost     the cost of the event
      */
     public void setEventCost(double eventCost) {
-        this.eventCost = eventCost;
+        if (Utilities.isWithinInclusiveRange(eventCost, 0, 99999)) {
+            this.eventCost = eventCost;
+        }
     }
 }
