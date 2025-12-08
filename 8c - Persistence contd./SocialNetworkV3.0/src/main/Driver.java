@@ -123,7 +123,7 @@ public class Driver {
 
                 // Pass the index of the post and the new post details to NewsFeed for updating
                 // and check for success.
-                if (newsfeed.updatePost(indexToUpdate, new MessagePost(author, message))) {
+                if (newsfeed.updatePost(indexToUpdate, author, message)) {
                     System.out.println("Update Successful");
                 } else {
                     System.out.println("Update NOT Successful");

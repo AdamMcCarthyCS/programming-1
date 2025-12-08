@@ -58,8 +58,9 @@ public class MessagePost {
      * @param author    the authors full name
      */
     public void setAuthor(String author) {
-        if (Utilities.validateStringLength(author, 10));
-        this.author = author;
+        if (Utilities.validateStringLength(author, 10)) {
+            this.author = author;
+        }
     }
 
     /**
