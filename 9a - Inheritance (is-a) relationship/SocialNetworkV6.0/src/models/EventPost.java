@@ -61,7 +61,7 @@ public class EventPost extends Post{
 
     /**
      *  Returns a String representation of the MessagePost object including the inherited fields
-     *  from Post superclass
+     *  from Post superclass.
      *
      * @return      A string representation of the MessagePost object
      */
