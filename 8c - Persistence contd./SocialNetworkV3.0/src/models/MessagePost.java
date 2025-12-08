@@ -18,7 +18,7 @@ public class MessagePost {
 
     public MessagePost(String author, String message) {
         this.author = Utilities.truncateString(author, 10);
-        this.message = message;
+        this.message = Utilities.truncateString(message, 40);
     }
 
     // GETTERS
@@ -69,7 +69,9 @@ public class MessagePost {
      * @param message   the text content of the message.
      */
     public void setMessage(String message) {
-        this.message = message;
+        if (Utilities.validateStringLength(message, 40)) {
+            this.message = message;
+        }
     }
 
     /**
