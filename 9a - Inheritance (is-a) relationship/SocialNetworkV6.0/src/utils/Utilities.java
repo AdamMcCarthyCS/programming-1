@@ -33,15 +33,16 @@ public class Utilities {
     }
 
     /**
-     * Checks if an integer is in the inclusive integer interval [minimum, maximum]
+     * Checks if a double is in the closed interval [minimum, maximum]
      *
-     * @param intToCheck    an integer to check
-     * @param minimum       the minimum valid value of the integer
-     * @param maximum       the maximum valid value of the integer
-     * @return              true if the checked integer lies inside the interval; false otherwise
+     * @param doubleToCheck    a double to check
+     * @param minimum       the minimum valid value of the double
+     * @param maximum       the maximum valid value of the double
+     * @return              true if the checked double lies within the interval; false otherwise
      */
-    public static boolean isWithinInclusiveRange(int intToCheck, int minimum, int maximum) {
-        if (intToCheck >= minimum && intToCheck <= maximum) {
+    public static boolean isWithinInclusiveRange(double doubleToCheck, double minimum,
+                                                 double maximum) {
+        if (doubleToCheck >= minimum && doubleToCheck <= maximum) {
             return true;
         }
         return false;
