@@ -16,4 +16,38 @@ public class EventPost extends Post{
         this.eventName = eventName;
         this.eventCost = eventCost;
     }
+
+    /**
+     * Returns the event name.
+     *
+     * @return      the name of the event
+     */
+    public String getEventName() {
+        return eventName;
+    }
+
+    /**
+     * Returns the cost of the event.
+     *
+     * @return      the cost of the event
+     */
+    public double getEventCost() {
+        return eventCost;
+    }
+
+    /**
+     * Sets the name of the event.
+     * @param eventName
+     */
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
+
+    /**
+     * Sets the cost of the event.
+     * @param eventCost
+     */
+    public void setEventCost(double eventCost) {
+        this.eventCost = eventCost;
+    }
 }
