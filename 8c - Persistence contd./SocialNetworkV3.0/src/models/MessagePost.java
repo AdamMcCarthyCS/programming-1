@@ -1,5 +1,7 @@
 package models;
 
+import utils.Utilities;
+
 public class MessagePost {
     /**
      * The message author
@@ -15,7 +17,7 @@ public class MessagePost {
     private int likes = 0;
 
     public MessagePost(String author, String message) {
-        this.author = author;
+        this.author = Utilities.truncateString(author, 10);
         this.message = message;
     }
 
@@ -56,6 +58,7 @@ public class MessagePost {
      * @param author    the authors full name
      */
     public void setAuthor(String author) {
+        if (Utilities.validateStringLength(author, 10));
         this.author = author;
     }
 
