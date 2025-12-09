@@ -42,6 +42,22 @@ public class LikedPost extends Post {
         return str;
     }
 
+    /**
+     * Increase the number of likes by 1.
+     */
+    public void likeAPost() {
+        likes++;
+    }
+
+    /**
+     * Decrease the number of likes by 1 if it is greater than 0.
+     */
+    public void unlikeAPost() {
+        if (likes > 0) {
+            likes--;
+        }
+    }
+
 }
 
 
