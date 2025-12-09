@@ -32,7 +32,7 @@ public class Driver {
                   6) Load Posts
                   ---------------------
                   0) Exit
-               ==>>  """);
+               ==>>\s\s""");
     }
 
     private void runMenu(){
