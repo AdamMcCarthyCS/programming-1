@@ -282,11 +282,26 @@ public class NewsFeed {
     }
 
     /**
-     * This method adds a like to a LikedPost if it exists at an index.
+     * Adds a like to a LikedPost if it exists at an index.
      *
-     * @param index     the index to check for the post
+     * @param index     the index to check for the post in posts ArrayList.
      */
     public void likeAPost(int index) {
+        Post post = null;
+        if (isValidIndex(index)) {
+            post = posts.get(index);
+            if (post instanceof LikedPost) {
+                ((LikedPost) post).likeAPost();
+            }
+        }
+    }
+
+    /**
+     * Removes a like from a LikedPost if it exists
+     * .
+     * @param index     the index to check for the post in posts ArrayList.
+     */
+    public void unlikeAPost(int index) {
         Post post = null;
         if (isValidIndex(index)) {
             post = posts.get(index);
