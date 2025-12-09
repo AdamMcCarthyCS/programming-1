@@ -12,6 +12,12 @@ package models;
 public class LikedPost extends Post {
     private int likes = 0;
 
+    /**
+     * Constructs a LikedPost object.
+     *
+     * @param author    the author of the liked post
+     * @param likes     the number of likes the post received
+     */
     public LikedPost(String author, int likes) {
         super(author);
         this.likes = likes;
@@ -23,6 +29,19 @@ public class LikedPost extends Post {
 
     public void setLikes(int likes) {
         this.likes = likes;
+    }
+
+    public String display() {
+        String str = super.display();
+
+        if(likes > 0) {
+            str += ("  -  " + likes + " people like this.\n");
+        }
+        else {
+            str += "0 likes.\n";
+        }
+
+        return str;
     }
 
 }

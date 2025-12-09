@@ -26,12 +26,7 @@ public class Post {
 
         str += (author + "\n");
 
-        if(likes > 0) {
-            str += ("  -  " + likes + " people like this.\n");
-        }
-        else {
-            str += "0 likes.\n";
-        }
+
 
         return str;
     }
