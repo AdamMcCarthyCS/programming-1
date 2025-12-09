@@ -219,13 +219,15 @@ public class Driver {
                     |   1) View ALL Posts     |
                     |   2) View Message Posts |
                     |   3) View Photo Posts   |
+                    |   4) View Event Posts   |
                     ---------------------------
-                    ==>>  """);
+                    ==>>\s""");
 
             switch (option) {
                 case 1 -> showPosts();
                 case 2 -> showMessagePosts();
                 case 3 -> showPhotoPosts();
+                case 4 -> showEventPosts();
                 default -> System.out.println("Invalid option entered: " + option);
             }
         }
