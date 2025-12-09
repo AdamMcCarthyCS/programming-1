@@ -121,6 +121,36 @@ public class NewsFeed {
         return false;
     }
 
+    /**
+     * Updates an EventPost object from the ArrayList of posts.
+     *
+     * <p>The user gives the index, name and cost of an event. If the event is found at the
+     * index and is of the type EventPost all its fields are updated.</p>
+     *
+     * @param indexToUpdate     the index where the Eventpost can be found
+     * @param author            the author of the EventPost
+     * @param eventName         the name of the event
+     * @param eventCost         the cost of the event
+     * @return                  true if the EventPost is successfully updated; otherwise false
+     */
+    public boolean updateEventPost(int indexToUpdate, String author, String eventName,
+                                   double eventCost) {
+        // find the object by the index number
+        Post foundEvent = findPost(indexToUpdate);
+
+        // If the object exists, use the details passed in as arguments to update the found
+        // object in the ArrayList
+        if ((foundEvent != null) && (foundEvent instanceof EventPost)) {
+            foundEvent.setAuthor(author);
+            ((EventPost) foundEvent).setEventName(eventName);
+            ((EventPost) foundEvent).setEventCost(eventCost);
+            return true;
+        }
+
+        //if the object was not found, return false, indicating that the update was not successful
+        return false;
+    }
+
     public boolean updatePhotoPost(int indexToUpdate, String author, String caption, String filename) {
         //find the object by the index number
         Post foundPost = findPost(indexToUpdate);
