@@ -16,11 +16,9 @@ public class LikedPost extends Post {
      * Constructs a LikedPost object.
      *
      * @param author    the author of the liked post
-     * @param likes     the number of likes the post received
      */
-    public LikedPost(String author, int likes) {
+    public LikedPost(String author) {
         super(author);
-        this.likes = likes;
     }
 
     public int getLikes() {
