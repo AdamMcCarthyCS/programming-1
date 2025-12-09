@@ -224,7 +224,8 @@ public class NewsFeed {
     @SuppressWarnings("unchecked")
     public void load() throws Exception {
         //list of classes that you wish to include in the serialisation, separated by a comma
-        Class<?>[] classes = new Class[] { MessagePost.class, PhotoPost.class, Post.class};
+        Class<?>[] classes = new Class[] { MessagePost.class, PhotoPost.class,
+            EventPost.class, Post.class};
 
         //setting up the xstream object with default security and the above classes
         XStream xstream = new XStream(new DomDriver());
