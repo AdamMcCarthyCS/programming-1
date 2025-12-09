@@ -189,6 +189,21 @@ public class NewsFeed {
         return number;
     }
 
+    /**
+     * Returns the number of EventPost objects in the posts ArrayList.
+     *
+     * @return      the number of posts in the posts ArrayList
+     */
+    public int numberOfEventPosts() {
+        int number = 0;
+        for (Post post: posts) {
+            if (post instanceof EventPost) {
+                number++;
+            }
+        }
+        return number;
+    }
+
     public int numberOfPhotoPosts() {
         int number = 0;
         for (Post post: posts){
@@ -198,6 +213,8 @@ public class NewsFeed {
         }
         return number;
     }
+
+
     /**
      * The load method uses the XStream component to read all the models.MessagePost objects from the posts.xml
      * file stored on the hard disk.  The read objects are loaded into the posts ArrayList
@@ -251,6 +268,5 @@ public class NewsFeed {
         }
         return false;
     }
-
 
 }
