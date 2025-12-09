@@ -3,10 +3,7 @@ package controllers;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import models.Post;
-import models.MessagePost;
-import models.PhotoPost;
-import models.EventPost;
+import models.*;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -282,6 +279,21 @@ public class NewsFeed {
             return (posts.get(index)) instanceof PhotoPost;
         }
         return false;
+    }
+
+    /**
+     * This method adds a like to a LikedPost if it exists at an index.
+     *
+     * @param index     the index to check for the post
+     */
+    public void likeAPost(int index) {
+        Post post = null;
+        if (isValidIndex(index)) {
+            post = posts.get(index);
+            if (post instanceof LikedPost) {
+                ((LikedPost) post).likeAPost();
+            }
+        }
     }
 
 }
