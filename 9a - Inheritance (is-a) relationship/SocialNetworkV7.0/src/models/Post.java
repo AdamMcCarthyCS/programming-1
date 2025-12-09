@@ -5,7 +5,7 @@ import utils.Utilities;
 public class Post {
 
     private String author = "";
-    private int likes = 0;
+
 
     public Post(String author) {
         this.author = Utilities.truncateString(author, 10);
@@ -19,14 +19,6 @@ public class Post {
         if (Utilities.validateStringLength(author, 10)) {
             this.author = author;
         }
-    }
-
-    public int getLikes() {
-        return likes;
-    }
-
-    public void setLikes(int likes) {
-        this.likes = likes;
     }
 
     public String display() {

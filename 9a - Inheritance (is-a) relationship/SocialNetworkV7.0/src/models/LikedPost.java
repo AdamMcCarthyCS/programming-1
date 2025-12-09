@@ -9,5 +9,23 @@ package models;
  * @see MessagePost
  * @see PhotoPost
  */
-public class LikedPost {
+public class LikedPost extends Post {
+    private int likes = 0;
+
+    public LikedPost(String author, int likes) {
+        super(author);
+        this.likes = likes;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
 }
+
+
+
