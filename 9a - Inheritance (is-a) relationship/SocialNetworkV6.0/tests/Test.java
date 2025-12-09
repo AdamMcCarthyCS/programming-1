@@ -1,4 +1,5 @@
 import controllers.NewsFeed;
+import models.EventPost;
 import models.MessagePost;
 import models.PhotoPost;
 
@@ -14,15 +15,20 @@ public class Test {
         PhotoPost photoPost1 = new PhotoPost("Larry", "img1.jpg", "First day in college");
         PhotoPost photoPost2 = new PhotoPost("Moe", "img2.jpg", "Graduation day");
 
+        // Create 2 EventPost objects
+        EventPost eventPost1 = new EventPost("Homer", "Bart's Birthday", 10);
+        EventPost eventPost2 = new EventPost("Marge", "Simpson Family Reunion", 20);
+
         // Create 1 NewsFeed object.
         NewsFeed newsFeed = new NewsFeed();
 
-        System.out.println("-----------------Adding Message and Photo Posts------------------");
+        System.out.println("-----------------Adding Message, Photo, and Event " +
+            "Posts------------------");
         // Add 1 PhotoPost object to the NewsFeed object.
         if (newsFeed.addPost(photoPost1)){
             System.out.println("Photo Post 1 Added Successfully ("
                     + photoPost1.getAuthor() + ": "
-                    + photoPost1.getCaption() + ","
+                    + photoPost1.getCaption() + ", "
                     + photoPost1.getFilename() + ")");
         }
 
@@ -33,13 +39,28 @@ public class Test {
                     + messagePost1.getAuthor() + ": "
                     + messagePost1.getMessage() + ")");
         }
+        // Add 1 EventPost object to the Newsfeed object.
+        if (newsFeed.addPost(eventPost1)) {
+            System.out.println("Event Post 1 Added Successfully ("
+                    + eventPost1.getAuthor() + ": "
+                    + eventPost1.getEventName() + ", "
+                    + eventPost1.getEventCost() + ")");
+        }
 
         // Add another PhotoPost object to the NewsFeed object.
         if (newsFeed.addPost(photoPost2)){
             System.out.println("Photo Post 2 Added Successfully ("
                     + photoPost2.getAuthor() + ": "
-                    + photoPost2.getCaption() + ","
+                    + photoPost2.getCaption() + ", "
                     + photoPost2.getFilename() + ")");
+        }
+
+        // Add another EventPost object to the Newsfeed object.
+        if (newsFeed.addPost(eventPost2)) {
+            System.out.println("Event Post 1 Added Successfully ("
+                + eventPost2.getAuthor() + ": "
+                + eventPost2.getEventName() + ", "
+                + eventPost2.getEventCost() + ")");
         }
 
         // Add another MessagePost object to the NewsFeed object.
