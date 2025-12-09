@@ -263,6 +263,20 @@ public class NewsFeed {
         return false;
     }
 
+    /**
+     * Checks if there is an EventPost object at the given index.
+     *
+     * @param index     the index of the object to check in posts
+     * @return          true if the object at the given index is an EventPost object; false
+     * otherwise
+     */
+    public boolean isValidEventPostIndex(int index) {
+        if (isValidIndex(index)) {
+            return posts.get(index) instanceof EventPost;
+        }
+        return false;
+    }
+
     public boolean isValidPhotoPostIndex(int index) {
         if (isValidIndex(index)) {
             return (posts.get(index)) instanceof PhotoPost;
