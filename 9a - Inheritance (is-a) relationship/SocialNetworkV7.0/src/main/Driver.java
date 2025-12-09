@@ -22,15 +22,16 @@ public class Driver {
     private int mainMenu(){
         return ScannerInput.readNextInt("""
                Social Network Menu
-                  ---------------------
+                  ----------------------
                   1) Add a Post
                   2) Update a Post
                   3) Delete a Post
                   4) List Posts
-                  ---------------------
-                  5) Save Posts
-                  6) Load Posts
-                  ---------------------
+                  5) Like / Unlike Posts
+                  ----------------------
+                  6) Save Posts
+                  7) Load Posts
+                  ----------------------
                   0) Exit
                ==>>\s\s""");
     }
@@ -45,8 +46,8 @@ public class Driver {
                 case 2 -> updatePost();
                 case 3 -> deletePost();
                 case 4 -> viewPosts();
-                case 5 -> savePosts();
-                case 6 -> loadPosts();
+                case 6 -> savePosts();
+                case 7 -> loadPosts();
                 default -> System.out.println("Invalid option entered: " + option);
             }
 
