@@ -1,6 +1,7 @@
 package main;
 
 import controllers.NewsFeed;
+import models.EventPost;
 import models.MessagePost;
 import models.PhotoPost;
 import models.Post;
@@ -74,8 +75,9 @@ public class Driver {
                     ---------------------------
                     |   1) Add a Message Post |
                     |   2) Add a Photo Post   |
+                    |   3) Add a Event Post   |
                     ---------------------------
-                    ==>> """);
+                    ==>>\s""");
 
         switch (option) {
             case 1 -> {
@@ -88,6 +90,12 @@ public class Driver {
                 String caption = ScannerInput.readNextLine("Enter the Caption:  ");
                 String filename = ScannerInput.readNextLine("Enter the Filename:  ");
                 isAdded = newsFeed.addPost(new PhotoPost(authorName, caption, filename));
+            }
+            case 3 -> {
+                String authorName = ScannerInput.readNextLine("Enter the Author Name:  ");
+                String eventName = ScannerInput.readNextLine("Enter the Event Name:  ");
+                double eventCost = ScannerInput.readNextDouble("Enter the Event Cost:  €");
+                isAdded = newsFeed.addPost(new EventPost(authorName, eventName, eventCost));
             }
             default -> System.out.println("Invalid option entered: " + option);
         }
