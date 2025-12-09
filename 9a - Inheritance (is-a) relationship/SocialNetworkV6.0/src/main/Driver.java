@@ -119,11 +119,12 @@ public class Driver {
             boolean isUpdated = false;
 
             int option = ScannerInput.readNextInt("""
-                    ---------------------------
+                    ------------------------------
                     |   1) Update a Message Post |
                     |   2) Update a Photo Post   |
-                    ---------------------------
-                    ==>> """);
+                    |   3) Update a Event Post   |
+                    ------------------------------
+                    ==>>\s""");
 
             switch (option) {
                 case 1 -> {
@@ -151,6 +152,23 @@ public class Driver {
                             String caption = ScannerInput.readNextLine("Enter the Caption:  ");
                             String filename = ScannerInput.readNextLine("Enter the Filename:  ");
                             isUpdated = newsFeed.updatePhotoPost(photoIndex, author, caption, filename);
+                        }
+                    }
+                }
+                case 3 -> {
+                    //ask the user to enter the index of the object to update, and assuming it's valid and is a MessagePost,
+                    //gather the new data from the user and update the selected object.
+                    showEventPosts();
+                    if (newsFeed.numberOfEventPosts() > 0) {
+                        int eventIndex = ScannerInput.readNextInt("Enter the index of the event " +
+                            "to update ==> ");
+                        if (newsFeed.isValidEventPostIndex(eventIndex)) {
+                            String author = ScannerInput.readNextLine("Enter the Author Name: ");
+                            String eventName = ScannerInput.readNextLine("Enter the Event Name: ");
+                            double eventCost = ScannerInput.readNextDouble("Enter the Event Cost:" +
+                                " ");
+                            isUpdated = newsFeed.updateEventPost(eventIndex, author, eventName,
+                                eventCost);
                         }
                     }
                 }
@@ -232,6 +250,12 @@ public class Driver {
     private void showPhotoPosts(){
         System.out.println("List of Photo Posts are:");
         System.out.println(newsFeed.showPhotoPosts());
+    }
+
+    //print the event posts in newsfeed i.e. posts ArrayList
+    private void showEventPosts() {
+        System.out.println("List of Event Posts are:");
+        System.out.println(newsFeed.showEventPosts());
     }
 
     //---------------------------------------------------------------------
