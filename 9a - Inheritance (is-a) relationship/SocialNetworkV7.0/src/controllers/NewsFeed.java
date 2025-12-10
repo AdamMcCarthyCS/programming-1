@@ -306,7 +306,7 @@ public class NewsFeed {
         if (isValidIndex(index)) {
             post = posts.get(index);
             if (post instanceof LikedPost) {
-                ((LikedPost) post).likeAPost();
+                ((LikedPost) post).unlikeAPost();
             }
         }
     }
