@@ -36,6 +36,23 @@ public class Driver {
                ==>>\s\s""");
     }
 
+    private void likeUnlikePosts() {
+        int choice = ScannerInput.readNextInt("""
+        Do you want to...
+            1) Like a Post
+            2) Unlike a Post
+        ==>>\s\s""");
+        showPosts();
+
+        if (choice == 1) {
+            int postNumber = ScannerInput.readNextInt("Choose which post to like: ");
+            newsFeed.likeAPost(postNumber);
+        } else {
+            int postNumber = ScannerInput.readNextInt("Choose which post to unlike: ");
+            newsFeed.unlikeAPost(postNumber);
+        }
+    }
+
     private void runMenu(){
         int option = mainMenu();
 
@@ -46,6 +63,7 @@ public class Driver {
                 case 2 -> updatePost();
                 case 3 -> deletePost();
                 case 4 -> viewPosts();
+                case 5 -> likeUnlikePosts();
                 case 6 -> savePosts();
                 case 7 -> loadPosts();
                 default -> System.out.println("Invalid option entered: " + option);
