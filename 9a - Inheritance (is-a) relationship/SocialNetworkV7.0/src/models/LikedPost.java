@@ -36,7 +36,7 @@ public class LikedPost extends Post {
             str += ("  -  " + likes + " people like this.\n");
         }
         else {
-            str += "0 likes.\n";
+            str += "  -  " + "0 likes.\n";
         }
 
         return str;
