@@ -9,7 +9,7 @@ package models;
  * @author Adam McCarthy
  * @version 1.0 (11-Dec-25)
  */
-public class Shape {
+public abstract class Shape {
     /**
      * The colour of the shape.
      */
@@ -66,4 +66,18 @@ public class Shape {
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
+
+    /**
+     * Method to calculate the area which must be implemented in subclasses.
+     *
+     * @return      the area of the shape
+     */
+    public abstract double getArea();
+
+    /**
+     * Method to calculate the perimeter which must be implemented in subclasses.
+     *
+     * @return      the perimeter of the shape
+     */
+    public abstract double getPerimeter();
 }
