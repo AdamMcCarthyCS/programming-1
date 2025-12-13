@@ -38,4 +38,45 @@ public class Triangle extends Shape{
     }
 
 
+    /**
+     * Calculates the area of the triangle.
+     *
+     * <p>Using Herons formula:</p>
+     * <pre>Area = sqrt(s(s-a)(s-b)(s-c))</pre>
+     * <p>where s = semiperimeter and a, b, and c, are the side lengths of the triangle.</p>
+     *
+     * @return      the area of the triangle
+     */
+    public double getArea() {
+        // use herons formula to find area: Area = sqrt(s(s-a)(s-b)(s-c))
+        // where a, b, and c are the three sides and s is the semiperimeter
+        double a = firstSide;
+        double b = secondSide;
+        double c = thirdSide;
+        double s = calculateSemiperimeter();
+
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    }
+
+    /**
+     * Returns the perimeter to the triangle.
+     *
+     * @return      the perimeter of the triangle
+     */
+    public double getPerimeter() {
+        // Sum all sides to get perimeter
+        return firstSide + secondSide + thirdSide;
+    }
+
+    /**
+     * Returns the semiperimeter of the triangle.
+     *
+     * <p>Calculates the semiperimeter by halving the perimeter.</p>
+     *
+     * @return      the semiperimeter of the triangle
+     */
+    private double calculateSemiperimeter() {
+        // calculate semiperimeter to use in herons formula s = (a + b + c) / 2
+        return getPerimeter() / 2;
+    }
 }
