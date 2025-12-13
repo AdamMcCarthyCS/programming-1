@@ -11,12 +11,15 @@ public class Utilities {
     /**
      * Rounds a double to two decimal places
      *
+     * <p>his method uses floating-point arithmetic and may produce
+     * small rounding inaccuracies for certain decimal values.</p>
+     *
      * @param value     a double value to be rounded
      * @return          the double value rounded to two decimal places
      */
     public static double roundDouble(double value) {
         // rounds the double value by rounding it as a long then dividing it to get back to
         // required precision
-        return Math.round(value * 100) / 100;
+        return Math.round(value * 100) / 100.0;
     }
 }
